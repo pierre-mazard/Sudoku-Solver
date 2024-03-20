@@ -85,16 +85,20 @@ def main():
         num_trials = int(input("Enter the number of trials: "))
         print(f"Solving Sudoku in {selected_filename}:")
         
-        # load the sudoku grid, solve it, and print the grid
+        # load the sudoku grid, calculate the execution time, and print the sudoku grid and execution time statistics 
         sudoku_grid = load_sudoku(selected_filename)
+        empty_cells = sum(row.count(0) for row in sudoku_grid) # count the number of initially empty cells
         avg_time, uncertainty, total_time = calculate_execution_time(sudoku_grid, num_trials)
         print_sudoku(sudoku_grid)
         
+        # print the number of initially empty cells
+        print(f"\nNumber of initially empty cells: {empty_cells}")
+
         # print the execution time if num_trials is 1, else print the average execution time, standard deviation, and total time
         if num_trials == 1:
             print(f"\nTemps d'exécution : {avg_time:.6f} secondes")
         else:
-            print(f"\nNumber of trials: {num_trials}")
+            print(f"Number of trials: {num_trials}")
             print(f"Average execution time: {avg_time:.6f} seconds ± {uncertainty:.6f} seconds")
             print(f"Total time (including uncertainty): {total_time:.6f} seconds\n")
 
