@@ -45,6 +45,12 @@ def print_sudoku(grid):
         print(" ".join(str(cell) if cell != 0 else "_" for cell in row))
 
 def calculate_execution_time(grid, num_trials):
+    # calculate the execution time of the sudoku solver if num_trials is 1
+    if num_trials <= 1:
+        start_time = time.perf_counter()
+        solve_sudoku(grid)
+        end_time = time.perf_counter()
+        return end_time - start_time, 0, end_time - start_time
     # calculate the average execution time, standard deviation, and total time
     execution_times = []
     for _ in range(num_trials):
@@ -84,10 +90,13 @@ def main():
         avg_time, uncertainty, total_time = calculate_execution_time(sudoku_grid, num_trials)
         print_sudoku(sudoku_grid)
         
-        #print number of trials, average execution time, standard deviation, and total time
-        print(f"\nNumber of trials: {num_trials}")
-        print(f"Average execution time: {avg_time:.6f} seconds ± {uncertainty:.6f} seconds")
-        print(f"Total time (including uncertainty): {total_time:.6f} seconds\n")
+        # print the execution time if num_trials is 1, else print the average execution time, standard deviation, and total time
+        if num_trials == 1:
+            print(f"\nTemps d'exécution : {avg_time:.6f} secondes")
+        else:
+            print(f"\nNumber of trials: {num_trials}")
+            print(f"Average execution time: {avg_time:.6f} seconds ± {uncertainty:.6f} seconds")
+            print(f"Total time (including uncertainty): {total_time:.6f} seconds\n")
 
         # ask the user if they want to retry or quit
         choice = input("Do you want to retry (r) or quit (q)? ")
