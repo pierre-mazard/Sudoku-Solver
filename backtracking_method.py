@@ -96,11 +96,16 @@ def main():
 
         # print the execution time if num_trials is 1, else print the average execution time, standard deviation, and total time
         if num_trials == 1:
-            print(f"Execution time : {avg_time* 1000:.6f} milliseconds\n")
+            print(f"Execution time: {avg_time * 1000:.35e} milliseconds\n")
         else:
+            # determine the number of significant figures to display
+            min_sig_figs = min(len(str(avg_time)), len(str(uncertainty)), len(str(total_time)))
+
+            # print the average execution time, standard deviation, and total time with uncertainty 
             print(f"Number of trials: {num_trials}")
-            print(f"Average execution time: {avg_time* 1000:.6f} milliseconds ± {uncertainty* 1000:.6f} milliseconds")
-            print(f"Total time (including uncertainty): {total_time* 1000:.6f} milliseconds\n")
+            print(f"Average execution time: {avg_time * 1000:.{min_sig_figs}e} milliseconds ± {uncertainty * 1000:.{min_sig_figs}e} milliseconds")
+            print(f"Total time (including uncertainty): {total_time * 1000:.{min_sig_figs}e} milliseconds\n")
+
 
         # ask the user if they want to retry or quit
         choice = input("Do you want to retry (r) or quit (q)? ")
