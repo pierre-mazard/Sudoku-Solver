@@ -1,5 +1,6 @@
 import os
 import time
+import statistics
 
 def load_sudoku(filename):
     # load the sudoku grid from the file
@@ -11,7 +12,7 @@ def load_sudoku(filename):
     return grid
 
 def is_valid_move(grid, row, col, num):
-    # check if the number is already present in the row, column or 3x3 grid
+    # check if the number is already present in the row, column, or 3x3 grid
     for i in range(9):
         if grid[row][i] == num or grid[i][col] == num:
             return False
@@ -44,35 +45,44 @@ def print_sudoku(grid):
         print(" ".join(str(cell) if cell != 0 else "_" for cell in row))
 
 if __name__ == "__main__":
-    while True: # loop to solve multiple sudokus
+    while True:  # loop to solve multiple sudokus
         sudoku_folder = "Sudoku-Board"
         filenames = [os.path.join(sudoku_folder, f"sudoku{i}.txt") for i in range(1, 6)]
 
-        print("Chose a Sudoku to resolve :")
+        print("Chose a Sudoku to resolve:")
         for i, filename in enumerate(filenames, start=1):
             print(f"{i}. {filename}")
 
-        choice = int(input("Enter the Sudoku number : ")) - 1
+        choice = int(input("Enter the Sudoku number: ")) - 1
         selected_filename = filenames[choice]
 
         print(f"Solving Sudoku in {selected_filename}:")
         sudoku_grid = load_sudoku(selected_filename)
-        
-        # solve the sudoku and measure the execution time
-        # start_time = time.perf_counter()
-        solve_sudoku(sudoku_grid)
-        # end_time = time.perf_counter()
 
-        # calculate the total time and uncertainty
-        # execution_time = end_time - start_time 
-        # uncertainty = 0.1 
-        # total_time = execution_time + uncertainty 
+        # Perform multiple trials to calculate average execution time
+        num_trials = 20 # number of trials to perform for each sudoku grid to calculate average execution time and standard deviation 
+        execution_times = []
+        for _ in range(num_trials):
+            start_time = time.perf_counter()
+            solve_sudoku(sudoku_grid)
+            end_time = time.perf_counter()
+            execution_times.append(end_time - start_time) # record the execution time for each trial 
 
-        # print the solved sudoku and the execution time
+        # Calculate average execution time and standard deviation
+        avg_execution_time = statistics.mean(execution_times)
+        std_deviation = statistics.stdev(execution_times)
+
+        # Calculate the uncertainty (standard error of the mean)
+        uncertainty = std_deviation / (num_trials ** 0.5)
+
+        total_time = avg_execution_time + uncertainty # total time including uncertainty 
+
         print_sudoku(sudoku_grid)
-        # print(f"Execution time : {total_time:.6f} secondes ± {uncertainty:.6f} secondes\n")
+        #print number of trials, average execution time, standard deviation, and total time
+        print(f"\nNumber of trials: {num_trials}")
+        print(f"Average execution time: {avg_execution_time:.6f} seconds ± {uncertainty:.6f} seconds")
+        print(f"Total time (including uncertainty): {total_time:.6f} seconds\n")
 
-        # ask the user if they want to solve another sudoku
-        choice = input("Do you want to retry (r) or quit (q) ? ")
+        choice = input("Do you want to retry (r) or quit (q)? ")
         if choice.lower() == "q":
             break
