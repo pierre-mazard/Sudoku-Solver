@@ -96,7 +96,7 @@ def main():
 
         # print the execution time if num_trials is 1, else print the average execution time, standard deviation, and total time
         if num_trials == 1:
-            print(f"\nTemps d'exécution : {avg_time:.6f} secondes")
+            print(f"Execution time : {avg_time:.6f} seconds\n")
         else:
             print(f"Number of trials: {num_trials}")
             print(f"Average execution time: {avg_time:.6f} seconds ± {uncertainty:.6f} seconds")
