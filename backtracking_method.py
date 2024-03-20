@@ -96,11 +96,11 @@ def main():
 
         # print the execution time if num_trials is 1, else print the average execution time, standard deviation, and total time
         if num_trials == 1:
-            print(f"Execution time : {avg_time:.6f} seconds\n")
+            print(f"Execution time : {avg_time* 1000:.6f} milliseconds\n")
         else:
             print(f"Number of trials: {num_trials}")
-            print(f"Average execution time: {avg_time:.6f} seconds ± {uncertainty:.6f} seconds")
-            print(f"Total time (including uncertainty): {total_time:.6f} seconds\n")
+            print(f"Average execution time: {avg_time* 1000:.6f} milliseconds ± {uncertainty* 1000:.6f} milliseconds")
+            print(f"Total time (including uncertainty): {total_time* 1000:.6f} milliseconds\n")
 
         # ask the user if they want to retry or quit
         choice = input("Do you want to retry (r) or quit (q)? ")
