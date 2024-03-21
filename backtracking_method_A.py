@@ -30,17 +30,17 @@ class SudokuSolver:
         return True
 
     def solve_sudoku(self): # Solve Sudoku using backtracking method 
-        for row in range(9):
-            for col in range(9):
-                if self.grid[row][col] == 0:
-                    for num in range(1, 10):
-                        if self.is_valid_move(row, col, num):
-                            self.grid[row][col] = num
-                            if self.solve_sudoku():
-                                return True
-                            self.grid[row][col] = 0
-                    return False
-        return True
+        for row in range(9): # Find an empty cell to place a number
+            for col in range(9): # Try placing numbers from 1 to 9 in the empty cell
+                if self.grid[row][col] == 0: # If the number is valid, place it in the cell
+                    for num in range(1, 10): # If the number is not valid, backtrack and try a different number
+                        if self.is_valid_move(row, col, num): # If all numbers are tried and none are valid, backtrack to the previous cell
+                            self.grid[row][col] = num # If the number is valid, place it in the cell
+                            if self.solve_sudoku(): # Recursively solve the Sudoku grid
+                                return True # If the Sudoku is solved, return True
+                            self.grid[row][col] = 0 # If the Sudoku is not solved, backtrack and try a different number
+                    return False # If all numbers are tried and none are valid, return False
+        return True # If all cells are filled, return True
 
     def print_sudoku(self): # Print the solved Sudoku grid to the console 
         for row in self.grid:
