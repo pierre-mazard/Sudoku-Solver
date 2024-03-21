@@ -72,7 +72,7 @@ def main(): # Main function to solve Sudoku using backtracking method
         sudoku_folder = "Sudoku-Board"
         filenames = [os.path.join(sudoku_folder, f"sudoku{i}.txt") for i in range(1, 6)]
 
-        print("Choose a Sudoku to solve:") # Display the list of Sudoku files to choose from
+        print("Chose a Sudoku to solve:") # Display the list of Sudoku files to choose from
         for i, filename in enumerate(filenames, start=1):
             print(f"{i}. {filename}")
 
