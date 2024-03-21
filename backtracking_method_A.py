@@ -12,17 +12,17 @@ class SudokuSolver:
         grid = []
         with open(filename, "r") as file:
             for line in file:
-                row = [int(cell) if cell != "_" else 0 for cell in line.strip()]
-                grid.append(row)
-        return grid
+                row = [int(cell) if cell != "_" else 0 for cell in line.strip()] # Convert "_" to 0
+                grid.append(row) 
+        return grid 
 
     def is_valid_move(self, row, col, num): # Check if the number is valid to place in the cell 
-        for i in range(9):
-            if self.grid[row][i] == num or self.grid[i][col] == num:
-                return False
+        for i in range(9):  
+            if self.grid[row][i] == num or self.grid[i][col] == num: # Check if the number is already present in the row or column  
+                return False 
 
-        start_row, start_col = 3 * (row // 3), 3 * (col // 3)
-        for i in range(start_row, start_row + 3):
+        start_row, start_col = 3 * (row // 3), 3 * (col // 3) # Check if the number is already present in the 3x3 grid  
+        for i in range(start_row, start_row + 3): 
             for j in range(start_col, start_col + 3):
                 if self.grid[i][j] == num:
                     return False
@@ -76,8 +76,8 @@ def main(): # Main function to solve Sudoku using backtracking method
         for i, filename in enumerate(filenames, start=1):
             print(f"{i}. {filename}")
 
-        choice = int(input("Enter the Sudoku number: ")) - 1
-        selected_filename = filenames[choice]
+        choice = int(input("Enter the Sudoku number: ")) - 1  # Input the Sudoku number to solve
+        selected_filename = filenames[choice] 
 
         num_trials = int(input("Enter the number of trials: ")) # Input the number of trials to calculate average execution time
         print(f"Solving Sudoku in {selected_filename}:")
