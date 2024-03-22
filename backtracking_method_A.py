@@ -1,6 +1,7 @@
 import os
 import time
 import statistics
+import cProfile
 
 # Class to solve Sudoku using backtracking method
 class SudokuSolver:
@@ -90,7 +91,7 @@ def main(): # Main function to solve Sudoku using backtracking method
             print(f"\nNumber of empty cells: {solver.empty_cells}")
             print(f"Execution time: {avg_time * 1000:.35e} milliseconds\n")
         else: # Display the average execution time, uncertainty, number of empty cells, and total time 
-            min_sig_figs = min(len(str(avg_time)), len(str(uncertainty)), len(str(total_time)))
+            min_sig_figs = min(len(str(avg_time)), len(str(uncertainty)), len(str(total_time))) # Calculate minimum significant figures
             print(f"\nNumber of empty cells: {solver.empty_cells}")
             print(f"Number of trials: {num_trials}")
             print(f"Average execution time: {avg_time * 1000:.{min_sig_figs}e} milliseconds ± {uncertainty * 1000:.{min_sig_figs}e} milliseconds")
@@ -101,4 +102,4 @@ def main(): # Main function to solve Sudoku using backtracking method
             break
 
 if __name__ == "__main__":
-    main()
+    cProfile.run('main()')
