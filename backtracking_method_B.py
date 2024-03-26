@@ -5,6 +5,7 @@ sudoku3="Sudoku-Board/sudoku3.txt"
 sudoku4="Sudoku-Board/sudoku4.txt"
 sudoku5="Sudoku-Board/sudoku5.txt"
 
+## Beware, Isabelle, you must include the POO method to your code ! 
 ###### Reading file ######
 def read_file(name_file):
     with open(name_file, 'r') as reading:
@@ -83,3 +84,10 @@ if solve_sudoku(grid):
 
 else:
     print("No solution.")
+
+## Once all the code is run, test with cProfile.run() to have the total run time taken
+    #by the entire code
+
+import cProfile
+
+cProfile.run("solve_sudoku(grid)")
