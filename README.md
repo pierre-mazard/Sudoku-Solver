@@ -98,7 +98,7 @@ Dans le pire des cas elle est équivalente à **O(9^81)**
 
 ![ref1]
 
-![](Pictures/BigO_backtracking_method_A.png.png)
+![](Aspose.Words.9aec35a6-4671-493c-a8a4-1ee359cb6563.002.png)
 
 **Conclusion :** 
 
@@ -403,6 +403,6 @@ Il est également possible d'effectuer un premier classement de difficulté des 
 
 
 
-[ref1]: Aspose.Words.9aec35a6-4671-493c-a8a4-1ee359cb6563.001.png
+[ref1]: Pictures\BigO_backtracking_method_A.png
 [ref2]: Aspose.Words.9aec35a6-4671-493c-a8a4-1ee359cb6563.005.png
 [ref3]: Aspose.Words.9aec35a6-4671-493c-a8a4-1ee359cb6563.006.png
