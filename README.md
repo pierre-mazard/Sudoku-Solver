@@ -96,7 +96,7 @@ La complexité temporelle du backtracking est généralement de l’ordre de **O
 
 Dans le pire des cas elle est équivalente à **O(9^81)**
 
-![](Backtracking Method A Profiling Results.png)
+![](C:\Users\Mazar\Documents\GitHub\Projets_la_plateforme\Sudoku-Solver\Pictures\Backtracking Method A (Recursiv)\Big O Backtracking Method A.png)
 
 ![](Pictures\Backtracking Method A (Recursiv)\big o.png)
 
