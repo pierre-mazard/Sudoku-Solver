@@ -101,5 +101,4 @@ Bravo! ton sudoku a été résolu!
 # by the entire code
 
 import cProfile
-
 cProfile.run("solve_sudoku(grid)")
