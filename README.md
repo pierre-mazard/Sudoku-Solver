@@ -98,7 +98,7 @@ Dans le pire des cas elle est équivalente à **O(9^81)**
 
 ![ref1]
 
-![](Pictures\BigO_backtracking_method_A.png.png)
+![](Pictures/BigO_backtracking_method_A.png.png)
 
 **Conclusion :** 
 
