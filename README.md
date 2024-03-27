@@ -98,7 +98,7 @@ Dans le pire des cas elle est équivalente à **O(9^81)**
 
 ![ref1]
 
-![](Aspose.Words.9aec35a6-4671-493c-a8a4-1ee359cb6563.002.png)
+![](Pictures\BigO_backtracking_method_A.png.png)
 
 **Conclusion :** 
 
