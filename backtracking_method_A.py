@@ -7,6 +7,7 @@ import cProfile
 class SudokuSolver:
     def __init__(self, filename):
         self.grid = self.load_sudoku(filename) 
+        self.original_grid = [row[:] for row in self.grid] # Create a copy of the original grid
         self.empty_cells = sum(row.count(0) for row in self.grid) # Count number of empty cells
 
     def load_sudoku(self, filename): # Load Sudoku from file
