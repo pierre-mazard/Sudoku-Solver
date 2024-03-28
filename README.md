@@ -4,25 +4,7 @@
 
 ## 1 Backtracking.
 
-### 1.A Backtracking récursif.
-
-**1. Analyse théorique.**
-
-_1\.1. Complexité temporelle._
-
-_1\.2. Complexité spatiale._
-
-**2. Analyse empirique.** 
-
-_2\.1. Mesure du temps d’exécution moyen en fonction du nombre d’essais._
-
-_2\.2. Mesure du temps d’exécution moyen en fonction du nombre de cases vides._
-
-_2\.3 Profilage._
-
-**3. Comparaison de l’étude théorique et empirique.**
-
-### 1.B Backtracking itératif 
+### 1.A Backtracking récursif A .
 
 **1. Analyse théorique.**
 
@@ -65,7 +47,7 @@ _2\.3 Profilage._
 
 # 1 Backtracking.
 
-## 1.A Backtracking récursif.
+## 1.A Backtracking récursif A.
 
 ### 1. Analyse théorique.
 
@@ -215,24 +197,6 @@ Il est également possible d'effectuer un premier classement de difficulté des 
 
 
 # ! A faire !
-
-**1.B Backtracking itératif** 
-
-**1. Analyse théorique.**
-
-1\.1. Complexité temporelle.
-
-1\.2. Complexité spatiale.
-
-**2. Analyse empirique.** 
-
-2\.1. Mesure du temps d’exécution moyen en fonction du nombre d’essais.
-
-2\.2. Mesure du temps d’exécution moyen en fonction du nombre de cases vides.
-
-2\.3 Profilage.
-
-**3. Comparaison de l’étude théorique et empirique.**
 
 **2 Force Brute.**
 
