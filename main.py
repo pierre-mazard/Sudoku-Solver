@@ -8,7 +8,7 @@ class SudokuVisualizer:
     # Initialize the Pygame window
     def __init__(self, filename):
         self.sudoku_solver = backtracking_method_A.SudokuSolver(filename)
-        self.width, self.height = 1200, 600
+        self.width, self.height = 1200, 620
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Sudoku Visualizer")
         self.clock = pygame.time.Clock()
@@ -47,9 +47,17 @@ class SudokuVisualizer:
     # Draw button to solve the sudoku
     def draw_solve_button(self):
         smaller_font = pygame.font.Font(None, 30)
-        pygame.draw.rect(self.screen, (255, 255, 255), (60 * 5, 540, 50, 50)) 
-        text = smaller_font.render("Recursive Backtracking", True, (0, 0, 0))
-        self.screen.blit(text, (60 * 5 + 5, 540 + 10))
+        # Draw the first Backtracking button
+        text = smaller_font.render("Backtracking A", True, (0, 0, 0))
+        text_rect = text.get_rect(center=(60 * 6 + 25, 540 + 25))  # Center the rectangle on the text
+        pygame.draw.rect(self.screen, (255, 255, 255), text_rect)  # Draw the rectangle
+        self.screen.blit(text, text_rect.topleft)  # Blit the text at the top left corner of the rectangle
+
+        # Draw the second Backtracking B button
+        text = smaller_font.render("Backtracking B", True, (0, 0, 0))
+        text_rect = text.get_rect(center=(60 * 6 + 25, 580 + 25))  # Center the rectangle on the text
+        pygame.draw.rect(self.screen, (255, 255, 255), text_rect)  # Draw the rectangle
+        self.screen.blit(text, text_rect.topleft)  # Blit the text at the top left corner of the rectangle
 
     # Draw text on the screen
     def draw_text(self, text, position, font=None):
