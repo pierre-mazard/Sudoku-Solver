@@ -99,20 +99,26 @@ class SudokuSolver():
 
         return avg_execution_time, uncertainty, total_time
     
-    def solve_selected_sudoku(self, file_index, num_trials):
+    def solve_selected_sudoku(self, file_index):
         if 1 <= file_index <= len(self.sudoku_txt):
             self.file_name = self.sudoku_txt[file_index - 1]
             self.grid = self.read_file(self.file_name)
             self.empty_cells = sum(row.count(0) for row in self.grid) # calculates the number of empty cells
             # to compare with backtracking_method_A.py AND brut_force.py
 
+            num_trials = int(input("Entrer une nombre de tests: "))
+
             # Expression of time, for comparison
             avg_time, uncertainty, total_time = self.calculate_execution_time(num_trials)
+            print()
+            print(f"""⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒""")
             print(f"""Average Execution Time: {avg_time} seconds, 
 Uncertainty: {uncertainty} seconds, 
 Total Time: {total_time} seconds""")
 
             if self.solve_sudoku():
+                print()
+                print(f"""⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒""")
                 print(f"""Nombre de cases à remplir : {self.empty_cells}""")
                 print(f"""⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒
           Solution :
@@ -130,3 +136,14 @@ Bravo! ton sudoku a été résolu!
         print("Veuillez choisir un fichier (entre 1 et 5) : \n")
         for i, file_name in enumerate (self.sudoku_txt, start=1):
             print(f"{i}. {file_name}")
+
+# Excecution code 
+
+def main():
+    solver = SudokuSolver()
+    solver.print_sudoku_files()
+    file_index = int(input("Entrez le numéro du fichier Sudoku à résoudre entre 1 et 5 : "))
+    solver.solve_selected_sudoku(file_index)
+
+if __name__ == "__main__":
+    main()
