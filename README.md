@@ -24,8 +24,8 @@
 |   d. Comparaison de l'étude théorique et empirique                                |
 |                               **3. Backtracking méthode B**                       |
 | a. Présentation de la fonction                                                    |
-| b. Compléxité algorithmique //  Les temps d'exécutions                            |
-| d.                                                                                |
+| b. Compléxité algorithmique                                                       |
+| d. Conclusion                                                                     |
 |                                                                                   |
 |                             **4. Comparaison des méthodes**                       |
 |           a. Comparaison Backtracking Method A et Force Brute methode A           |
@@ -377,37 +377,37 @@ La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9
 
 ### Les temps d'exécutions : 
 
-| **Nb essais = 1** | Nombre cases vides |Moyenne exécution (s.)
+| **Nb essais = 1** | Nombre cases vides |Moyenne exécution (ms.)
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,00317      |
-| Fichier 2     |    52       |    0,01561      |
-| **Fichier 3**     |    **43**       |    **0,00154**      |
-| Fichier 4     |    57       |    0,05026      |
-| Fichier 5     |    58       |    0,03562      |
+| Fichier 1     |    45       |    3,17      |
+| Fichier 2     |    52       |    15,61      |
+| **Fichier 3**     |    **43**       |    **1,54**      |
+| Fichier 4     |    57       |    50,26      |
+| Fichier 5     |    58       |    35,62      |
 
-| **Nb essais = 100** | Nombre cases vides |Moyenne exécution (s.)
+| **Nb essais = 100** | Nombre cases vides |Moyenne exécution (ms.)
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,0000497    |
-| Fichier 2     |    52       |    0,0001594    |
-| Fichier 3     |    43       |    0,0000448    |
-| Fichier 4     |    57       |    0,0005462    |
-| **Fichier 5**     |    **58**       |    **0,0000241**    |
+| Fichier 1     |    45       |    0,0497    |
+| Fichier 2     |    52       |    0,1594    |
+| Fichier 3     |    43       |    0,0448    |
+| Fichier 4     |    57       |    0,5462    |
+| **Fichier 5**     |    **58**       |    **0,0241**    |
 
-| **Nb essais = 1000** | Nombre cases vides |Moyenne exécution (s.)
+| **Nb essais = 1000** | Nombre cases vides |Moyenne exécution (ms.)
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,00001994     |
-| Fichier 2     |    52       |    0,00016549     |
-| **Fichier 3**     |    **43**       |    **0,00001758**     |
-| Fichier 4     |    57       |    0,00006088     |
-| Fichier 5     |    58       |    0,00004642     |
+| Fichier 1     |    45       |    0,01994     |
+| Fichier 2     |    52       |    0,16549     |
+| **Fichier 3**     |    **43**       |    **0,01758**     |
+| Fichier 4     |    57       |    0,06088     |
+| Fichier 5     |    58       |    0,04642     |
 
-| **Nb essais = 1000000** | Nombre cases vides |Moyenne exécution (s.)
+| **Nb essais = 1000000** | Nombre cases vides |Moyenne exécution (ms.)
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,000008552    |
-| **Fichier 2**     |    **52**       |    **0,000008460**    |
-| Fichier 3     |    43       |    0,000008488    |
-| Fichier 4     |    57       |    0,000008512    |
-| Fichier 5     |    58       |    0,000008477    |
+| Fichier 1     |    45       |    0,008552    |
+| **Fichier 2**     |    **52**       |    **0,008460**    |
+| Fichier 3     |    43       |    0,008488    |
+| Fichier 4     |    57       |    0,008512    |
+| Fichier 5     |    58       |    0,008477    |
 
 ## d.Conclusion
 
@@ -420,59 +420,90 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 
 
 # 4. Comparaison des méthodes 
-## a. Comparaison Backtracking Method A et Force Brute methode A
+## a. Comparaison Backtracking Méthode A et Force Brute Méthode A
 
 ### Différence entre les deux codes 
 
-### Différence entre la moyenne de temps d'exécution
+### Différence entre la moyenne de temps d'exécution (en ms.)
 
-
-| **Nb essais = 1** | Backtracking Méthode A | Force Brute Méthode B|
+| **Nb essais = 1** |  Backtracking Méthode A | Force Brute Méthode A|
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,00317      |
-| Fichier 2     |    52       |    0,01561      |
-| Fichier 3     |    43       |    0,00154      |
-| Fichier 4     |    57       |    0,05026      |
-| Fichier 5     |    58       |    0,03562      |
+| Fichier 1     |    10,07       |    3,17      |
+| Fichier 2     |    36,47       |    15,61      |
+| **Fichier 3**     |    **5,62**       |    **1,54**      |
+| Fichier 4     |    151,93       |    50,26      |
+| Fichier 5     |    94,99       |    35,62      |
 
-## b. Comparaison Backtracking Method A et Backtracking Method B 
+| **Nb essais = 100** | Backtracking Méthode A | Force Brute Méthode A|
+|---------------|-----------|-----------|
+| Fichier 1     |    0,1171 |    0,0497    |
+| Fichier 2     |    0,3710 |    0,1594    |
+| Fichier 3     |    **0,0768** |    0,0448    |
+| Fichier 4     |    1,6413 |    0,5462    |
+| Fichier 5     |    0,9354 |    **0,0241**    |
+
+| **Nb essais = 1000** | Backtracking Méthode A | Force Brute Méthode A|
+|---------------|-----------|-----------|
+| Fichier 1     |    0,02594|    0,01994     |
+| Fichier 2     |    0,04969|    0,16549     |
+| Fichier 3     |    **0,02325**|    **0,01758**     |
+| Fichier 4     |    0,16092|    0,06088     |
+| Fichier 5     |    0,10333|    0,04642     |
+
+| **Nb essais = 1000000** | Backtracking Méthode A | Force Brute Méthode A|
+|---------------|-----------|-----------|
+| Fichier 1     |    0,010223|    0,008552    |
+| Fichier 2     |    **0,010191**|    **0,008460**    |
+| Fichier 3     |    0,010204|    0,008488    |
+| Fichier 4     |    0,010338|    0,008512    |
+| Fichier 5     |    0,010272|    0,008477    |
+
+### Conclusion 
+
+
+## b. Comparaison Backtracking Méthode A et Backtracking Méthode B 
 
 ### Différence entre les deux codes 
 
-### Différence entre la moyenne de temps d'exécution
+### Différence entre la moyenne de temps d'exécution (en ms.)
 
-| **Nb essais = 1** | Méthode A |Méthode B|
+| **Nb essais = 1** | Méthode A |Méthode B |
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,00317      |
-| Fichier 2     |    52       |    0,01561      |
-| Fichier 3     |    43       |    0,00154      |
-| Fichier 4     |    57       |    0,05026      |
-| Fichier 5     |    58       |    0,03562      |
+| Fichier 1     |    10,07       |    3,17      |
+| Fichier 2     |    36,47       |    15,61      |
+| **Fichier 3**     |    **5,62**       |    **1,54**      |
+| Fichier 4     |    151,93       |    50,26      |
+| Fichier 5     |    94,99       |    35,62      |
 
-| **Nb essais = 100** | Méthode A |Méthode B|
+| **Nb essais = 100** | Méthode A |Méthode B |
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,0000497    |
-| Fichier 2     |    52       |    0,0001594    |
-| Fichier 3     |    43       |    0,0000448    |
-| Fichier 4     |    57       |    0,0005462    |
-| **Fichier 5**     |    **58**       |    **0,0000241**    |
+| Fichier 1     |    0,1171 |    0,0497    |
+| Fichier 2     |    0,3710 |    0,1594    |
+| Fichier 3     |    **0,0768** |    0,0448    |
+| Fichier 4     |    1,6413 |    0,5462    |
+| Fichier 5     |    0,9354 |    **0,0241**    |
 
-| **Nb essais = 1000** | Méthode A |Méthode B|
+| **Nb essais = 1000** | Méthode A |Méthode B |
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,00001994     |
-| Fichier 2     |    52       |    0,00016549     |
-| **Fichier 3**     |    **43**       |    **0,00001758**     |
-| Fichier 4     |    57       |    0,00006088     |
-| Fichier 5     |    58       |    0,00004642     |
+| Fichier 1     |    0,02594|    0,01994     |
+| Fichier 2     |    0,04969|    0,16549     |
+| Fichier 3     |    **0,02325**|    **0,01758**     |
+| Fichier 4     |    0,16092|    0,06088     |
+| Fichier 5     |    0,10333|    0,04642     |
 
-| **Nb essais = 1000000** | Méthode A |Méthode B|
+| **Nb essais = 1000000** | Méthode A |Méthode B |
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,000008552    |
-| **Fichier 2**     |    **52**       |    **0,000008460**    |
-| Fichier 3     |    43       |    0,000008488    |
-| Fichier 4     |    57       |    0,000008512    |
-| Fichier 5     |    58       |    0,000008477    |
+| Fichier 1     |    0,010223|    0,008552    |
+| Fichier 2     |    **0,010191**|    **0,008460**    |
+| Fichier 3     |    0,010204|    0,008488    |
+| Fichier 4     |    0,010338|    0,008512    |
+| Fichier 5     |    0,010272|    0,008477    |
 
+### Conclusion 
+
+La vitesse d'exécution dépendra du nombre d'essais et du nombre de cases vides. 
+La méthode B semble être plus rapide en matière d'exécution sur quasiment la totalité des test N=X .
+Toutefois, pour nombres de test = 100, la méthode A fait apparaître une différence dans la moyenne de temps d'exécution. La méthode semble plus rapidement gérer le sudoku 3 alors que la méthode B semble gérer, à 100 tests, plus rapidement le sudoku 5. 
 
 ## c. Utilisation du profilage
 
