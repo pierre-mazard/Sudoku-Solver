@@ -381,7 +381,7 @@ La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9
 |---------------|-----------|-----------|
 | Fichier 1     |    45       |    0,00317      |
 | Fichier 2     |    52       |    0,01561      |
-| Fichier 3     |    43       |    0,00154      |
+| **Fichier 3**     |    **43**       |    **0,00154**      |
 | Fichier 4     |    57       |    0,05026      |
 | Fichier 5     |    58       |    0,03562      |
 
@@ -391,25 +391,27 @@ La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9
 | Fichier 2     |    52       |    0,0001594    |
 | Fichier 3     |    43       |    0,0000448    |
 | Fichier 4     |    57       |    0,0005462    |
-| Fichier 5     |    58       |    0,0000241    |
+| **Fichier 5**     |    **58**       |    **0,0000241**    |
 
 | **Nb essais = 1000** | Nombre cases vides |Moyenne exécution (s.)
 |---------------|-----------|-----------|
 | Fichier 1     |    45       |    0,00001994     |
 | Fichier 2     |    52       |    0,00016549     |
-| Fichier 3     |    43       |    0,00001758     |
+| **Fichier 3**     |    **43**       |    **0,00001758**     |
 | Fichier 4     |    57       |    0,00006088     |
 | Fichier 5     |    58       |    0,00004642     |
 
 | **Nb essais = 1000000** | Nombre cases vides |Moyenne exécution (s.)
 |---------------|-----------|-----------|
-| Fichier 1     |    45       |    0,000008552  |
-| Fichier 2     |    52       |    0,01561      |
-| Fichier 3     |    43       |    0,00154      |
-| Fichier 4     |    57       |    0,05026      |
-| Fichier 5     |    58       |    0,03562      |
+| Fichier 1     |    45       |    0,000008552    |
+| **Fichier 2**     |    **52**       |    **0,000008460**    |
+| Fichier 3     |    43       |    0,000008488    |
+| Fichier 4     |    57       |    0,000008512    |
+| Fichier 5     |    58       |    0,000008477    |
 
-## d. ? 
+## d. Paramètres efficaces
+
+En prenant en compte le nombre de cases vides à remplir et la moyenne d'exécution de l'algorithme, 
 
 # 4. Comparaison des méthodes 
 ## a. Comparaison Backtracking Method A et Force Brute methode A
