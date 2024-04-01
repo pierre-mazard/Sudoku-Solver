@@ -5,27 +5,27 @@
 |                         **1. Backtracking récursif méthode A**                    |
 |   a. Présentation de la fonction                                                  |
 |   b. Analyse théorique                                                            |
-|     - Complexité temporelle                                                       |
-|     - Complexité spatiale                                                         |
+|         - Complexité temporelle                                                       |
+|         - Complexité spatiale                                                         |
 |   c. Analyse empirique                                                            |
-|     - Mesure du temps d’exécution moyen en fonction du nombre d’essais            |
-|     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
-|     - Profilage                                                                   |                     
+|         - Mesure du temps d’exécution moyen en fonction du nombre d’essais            |
+|         - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
+|         - Profilage                                                                   |                     
 |   d. Comparaison de l'étude théorique et empirique                                |
 |                             **2. Force Brute méthode A**                          |
 |   a. Présentation de la fonction                                                  |
 |   b. Analyse théorique                                                            |
-|     - Complexité temporelle                                                       |
-|     - Complexité spatiale                                                         |
+|         - Complexité temporelle                                                       |
+|         - Complexité spatiale                                                         |
 |   c. Analyse empirique                                                            |
-|     - Mesure du temps d’exécution moyen en fonction du nombre d’essais            |
-|     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
-|     - Profilage                                                                   |                     
+|         - Mesure du temps d’exécution moyen en fonction du nombre d’essais            |
+|         - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
+|         - Profilage                                                                   |                     
 |   d. Comparaison de l'étude théorique et empirique                                |
 |                               **3. Backtracking méthode B**                       |
-| a. Présentation de la fonction                                                    |
-| b. Compléxité algorithmique                                                       |
-| d. Conclusion                                                                     |
+|         a. Présentation de la fonction                                                    |
+|         b. Compléxité algorithmique                                                       |
+|         d. Conclusion                                                                     |
 |                             **4. Comparaison des méthodes**                       |
 |           a. Comparaison Backtracking Method A et Force Brute methode A           |
 |           b. Comparaison Backtracking Method A et Backtracking Method B           |      
