@@ -298,7 +298,7 @@ Cela peut être considéré comme une complexité spatiale constante car le nomb
 
 **2\.3 Profilage.**
 
-![Profilage] (https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brute%20method%20A.png "Profilage")
+![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brute%20method%20A.png "Profilage")
 
 **3. Comparaison de l’étude théorique et empirique.**
 
