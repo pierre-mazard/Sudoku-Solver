@@ -45,6 +45,39 @@ _2\.3 Profilage._
 
 # 1 Backtracking récursif méthode A.
 
+
+    def solve_sudoku(self): # Solve Sudoku using backtracking method 
+        for row in range(9): # Find an empty cell to place a number
+            for col in range(9): # Try placing numbers from 1 to 9 in the empty cell
+                if self.grid[row][col] == 0: # If the number is valid, place it in the cell
+                    for num in range(1, 10): # If the number is not valid, backtrack and try a different number
+                        if self.is_valid_move(row, col, num): # If all numbers are tried and none are valid, backtrack to the previous cell
+                            self.grid[row][col] = num # If the number is valid, place it in the cell
+                            if self.solve_sudoku(): # Recursively solve the Sudoku grid
+                                return True # If the Sudoku is solved, return True
+                            self.grid[row][col] = 0 # If the Sudoku is not solved, backtrack and try a different number
+                    return False # If all numbers are tried and none are valid, return False
+        return True # If all cells are filled, return True 
+
+
+**Fonctionnement de la méthode:**
+
+Elle parcourt chaque cellule de la grille.
+
+Si la cellule est vide (contient 0), elle essaie de placer les chiffres de 1 à 9 dans cette cellule.
+Pour chaque chiffre, elle vérifie s’il est valide en appelant la fonction is_valid_move(row, col, num).
+
+Si le chiffre est valide, elle le place dans la cellule et récursivement continue à résoudre le reste de la grille.
+
+Si la grille est résolue, elle renvoie True.
+
+Sinon, elle revient en arrière (backtrack) en réinitialisant la cellule et en essayant un autre chiffre.
+
+Si aucun chiffre ne convient, elle renvoie False.
+
+L’approche de backtracking permet d’explorer efficacement les différentes combinaisons tout en évitant les configurations invalides.
+
+
 ### 1. Analyse théorique.
 
 #### 1.1. Complexité temporelle.
