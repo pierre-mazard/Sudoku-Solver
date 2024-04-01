@@ -1,9 +1,7 @@
 # Etude comparative des différentes méthodes de résolution des sudokus :
-|-----------------------------------------------------------------------------------|
 |                                     **Sommaire**                                  | 
 |-----------------------------------------------------------------------------------|
 | **1. Backtracking récursif méthode A**  | **2. Force Brute méthode A**            |
-|-----------------------------------------|-----------------------------------------|
 |   a. Présentation de la fonction        |    a. Présentation de la fonction       |
 |   b. Analyse théorique                  |    b. Analyse théorique                 |
 |     - Complexité temporelle             |      - Complexité temporelle            |
@@ -17,14 +15,12 @@
 |     et empirique                        |     et empirique                        |
 |-----------------------------------------|-----------------------------------------|
 |                                **3. Backtracking méthode B**                      |
-|-----------------------------------------|-----------------------------------------|
 | a. Présentation de la fonction                                                    |
 | b. Compléxité algorithmique //  Les temps d'exécutions                            |
 | d.                                                                                |
 |                                                                                   |
 |-----------------------------------------|-----------------------------------------|
 |                             **4. Comparaison des méthodes**                       |
-|-----------------------------------------|-----------------------------------------|
 |           a. Comparaison Backtracking Method A et Force Brute methode A           |
 |           b. Comparaison Backtracking Method A et Backtracking Method B           |      
 |                              c. Utilisation du profilage                          |
