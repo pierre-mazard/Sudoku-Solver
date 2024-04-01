@@ -225,9 +225,52 @@ Il est également possible d'effectuer un premier classement de difficulté des 
 
 
 
-# ! A faire !
 
-**2 Force Brute.**
+
+# 2 Force Brute méthode B.
+
+    def brute_force_solve(self):
+        numbers = list(range(1, 10))  # Numbers to fill the grid
+        for row in range(9):
+            if 0 in self.grid[row]:  # If the row contains empty cells
+                permutations = itertools.permutations(numbers)  # Generate all permutations of numbers
+                for permutation in permutations:
+                    # Try to fill the row with the permutation
+                    for col in range(9):
+                        if self.grid[row][col] == 0:
+                            self.grid[row][col] = permutation[col]
+                    # If the grid is valid, move to the next row
+                    if self.is_valid_grid():
+                        break
+                    # If the grid is not valid, reset the row and try the next permutation
+                    else:
+                        self.grid[row] = self.original_grid[row]
+        return self.grid
+
+**Fonctionnement de la méthode:**
+
+Génération complète des permutations :
+
+La méthode commence par créer une liste de chiffres de 1 à 9.
+
+Pour chaque ligne dans la grille, elle génère toutes les permutations possibles de ces chiffres.
+
+Elle remplit ensuite la ligne avec chaque permutation et vérifie si la grille est valide en appelant la fonction is_valid_grid().
+
+Évaluation des contraintes après la génération :
+
+La méthode génère toutes les permutations avant de vérifier si la grille est valide.
+
+Elle ne tient pas compte des contraintes implicites (par exemple, la relation entre les chiffres dans la même colonne ou le même carré).
+
+Pas d’abandon anticipé :
+
+Si une permutation ne donne pas une grille valide, la méthode réinitialise la ligne et essaie la permutation suivante.
+
+Elle ne vérifie pas les contraintes implicites avant de générer toutes les solutions possibles.
+
+En résumé, la méthode explore toutes les combinaisons possibles de chiffres pour chaque ligne sans évaluer les contraintes implicites plus tôt dans le processus.
+# ! A faire !
 
 **1. Analyse théorique.**
 
