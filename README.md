@@ -377,28 +377,14 @@ La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9
 
 ### Les temps d'exécutions : 
 
-| Colonne 1 | Colonne 2 | Colonne 3 |
-|-----------|-----------|-----------|
-| Ligne 1   | Ligne 1   | Ligne 1   |
-| Ligne 2   | Ligne 2   | Ligne 2   |
-| Ligne 3   | Ligne 3   | Ligne 3   |
-| Ligne 4   | Ligne 4   | Ligne 4   |
-| Ligne 5   | Ligne 5   | Ligne 5   |
-| Ligne 6   | Ligne 6   | Ligne 6   |
-| Ligne 7   | Ligne 7   | Ligne 7   |
-| Ligne 8   | Ligne 8   | Ligne 8   |
-| Ligne 9   | Ligne 9   | Ligne 9   |
-| Ligne 10  | Ligne 10  | Ligne 10  |
-| Ligne 11  | Ligne 11  | Ligne 11  |
-| Ligne 12  | Ligne 12  | Ligne 12  |
-| Ligne 13  | Ligne 13  | Ligne 13  |
-| Ligne 14  | Ligne 14  | Ligne 14  |
-| Ligne 15  | Ligne 15  | Ligne 15  |
-| Ligne 16  | Ligne 16  | Ligne 16  |
-| Ligne 17  | Ligne 17  | Ligne 17  |
-| Ligne 18  | Ligne 18  | Ligne 18  |
-| Ligne 19  | Ligne 19  | Ligne 19  |
-| Ligne 20  | Ligne 20  | Ligne 20  |
+| **Nb essais = 1** | Nombre cases vides |Moyenne exécution (s.)| Colonne 5 |
+|---------------|-----------|-----------|-----------|
+| Fichier 1     |    45       |    0,00317      |           |
+| Fichier 2     |    52       |    0,01561      |           |
+| Fichier 3     |    43       |    0,00154      |           |
+| Fichier 4     |    57       |    0,05026      |           |
+| Fichier 5     |    58       |    0,03562      |           |
+
 
 
 ## d. ? 
