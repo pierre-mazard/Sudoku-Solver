@@ -1,4 +1,5 @@
 # Etude comparative des différentes méthodes de résolution des sudokus :
+
 |                                     **Sommaire**                                  | 
 |-----------------------------------------------------------------------------------|
 | **1. Backtracking récursif méthode A**  | **2. Force Brute méthode A**            |
@@ -11,21 +12,18 @@
 |     - Temps d'exécution moyen cases     |     - Temps d'exécution moyen cases     |
 |                               vides     |                               vides     |
 |     - Profilage                         |     - Profilage                         |
-|   d. Comparaison de l'étude théorique   |   d. Comparaison de l'étude théorique   |
-|     et empirique                        |     et empirique                        |
-|-----------------------------------------|-----------------------------------------|
+|   d. Comparaison de l'étude théorique et empirique |   d. Comparaison de l'étude théorique et empirique  |
 |                                **3. Backtracking méthode B**                      |
 | a. Présentation de la fonction                                                    |
 | b. Compléxité algorithmique //  Les temps d'exécutions                            |
 | d.                                                                                |
 |                                                                                   |
-|-----------------------------------------|-----------------------------------------|
 |                             **4. Comparaison des méthodes**                       |
 |           a. Comparaison Backtracking Method A et Force Brute methode A           |
 |           b. Comparaison Backtracking Method A et Backtracking Method B           |      
 |                              c. Utilisation du profilage                          |
 |                                   d. Conclusion                                   |
-|-----------------------------------------------------------------------------------|
+
 
 
 # 1 Backtracking récursif méthode A.
