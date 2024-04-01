@@ -20,7 +20,7 @@ _2\.3 Profilage._
 
 **3. Comparaison de l’étude théorique et empirique.**
 
-## 2 Force Brute méthode B.
+## 2 Force Brute méthode A.
 
 **1. Analyse théorique.**
 
@@ -65,6 +65,7 @@ _2\.3 Profilage._
 Elle parcourt chaque cellule de la grille.
 
 Si la cellule est vide (contient 0), elle essaie de placer les chiffres de 1 à 9 dans cette cellule.
+
 Pour chaque chiffre, elle vérifie s’il est valide en appelant la fonction is_valid_move(row, col, num).
 
 Si le chiffre est valide, elle le place dans la cellule et récursivement continue à résoudre le reste de la grille.
@@ -82,17 +83,11 @@ L’approche de backtracking permet d’explorer efficacement les différentes c
 
 #### 1.1. Complexité temporelle.
 
-La complexité temporelle de la méthode A a été évaluée à **O(9^M)**
+**Pire cas :** O(9^m) (où m est le nombre d’appels récursifs nécessaires pour résoudre le Sudoku).
 
-La complexité temporelle du backtracking est généralement de l’ordre de **O(N^M)** il s’agit d’une **complexité exponentielle**.
+**Cas moyen :** O(9^m) (Idem que le pire cas, car le backtracking explore toutes les combinaisons possibles).
 
-*où **N** = nombre de possibilités pour chaque cellule (dans le cas du Sudoku, N=9).*
-
-*et **M** = nombre de cellules vides à remplir.*
-
-Dans le pire des cas elle est équivalente à **O(9^81)**
-
-![Complexité temporelle backtracking methode récursive](https://github.com/pierre-mazard/Sudoku-Solver/blob/README.md/Pictures/Backtracking%20Method%20A%20(Recursiv)/Big%20O%20Backtracking%20Method%20A.png "Complexité temporelle backtracking methode récursive")
+**Meilleur cas :** O(m) (où m est le nombre d’appels récursifs nécessaires pour résoudre le Sudoku).
 
 ![Diverses complexités temporelles](https://github.com/pierre-mazard/Sudoku-Solver/blob/README.md/Pictures/Backtracking%20Method%20A%20(Recursiv)/big%20o.png "Diverses complexités temporelles")
 
@@ -106,17 +101,15 @@ De plus, la plupart des grilles de Sudoku sont conçues pour avoir une solution 
 
 #### 1.2. Complexité spatiale.
 
-La complexité spatiale est de l’ordre de **O(n)** il s’agit d’une **complexité linéaire.**
+La complexité spatiale dépend de la profondeur de la récursion.
 
-*où **n** = nombre de cellules dans la grille.* 
+Chaque appel récursif crée une nouvelle pile d’appels avec des variables locales.
 
-![Complexité spatiale backtracking methode récursive](https://github.com/pierre-mazard/Sudoku-Solver/blob/README.md/Pictures/Backtracking%20Method%20A%20(Recursiv)/Spatial%20Complexity%20Backtracking%20Method%20A.png "Complexité spatiale backtracking methode récursive")
+Dans le pire des cas, lorsque l’arbre de recherche est profond (par exemple, pour un Sudoku difficile), la complexité spatiale peut être O(9^m), où m est le nombre d’appels récursifs nécessaires pour résoudre le Sudoku.
 
 **Conclusion :** 
 
-La **complexité est linéaire** car l’algorithme utilise de l’espace supplémentaire pour stocker la grille de Sudoku et effectuer le backtracking. 
-
-Dans le cas d’une grille de Sudoku standard de 9x9, la complexité spatiale serait donc de **O(81)**, soit **O(1)** en termes de complexité spatiale asymptotique.
+En général, la complexité spatiale est linéaire par rapport au nombre d’appels récursifs.
 
 ### 2. Analyse empirique.
 
@@ -223,11 +216,7 @@ Il est également possible d'effectuer un premier classement de difficulté des 
 
 
 
-
-
-
-
-# 2 Force Brute méthode B.
+# 2 Force Brute méthode méthode A.
 
     def brute_force_solve(self):
         numbers = list(range(1, 10))  # Numbers to fill the grid
@@ -275,35 +264,31 @@ En résumé, la méthode explore toutes les combinaisons possibles de chiffres p
 
 #### 1\.1. Complexité temporelle.
 
-La complexité temporelle de la méthode de force brute A dépend du nombre d’opérations effectuées pour remplir la grille :
+**Pire cas :** O(9^81) (où 81 est le nombre total de cellules dans un Sudoku standard).
 
-Boucles imbriquées :
-Votre méthode parcourt chaque cellule de la grille (9x9).
-Le nombre total d’itérations est 81 (9 lignes × 9 colonnes).
-Cela se traduit par une complexité O(1) pour les boucles imbriquées.
-Boucle de génération aléatoire :
-Pour chaque cellule vide, vous générez un nombre aléatoire entre 1 et 9.
-Dans le pire des cas, vous devrez générer plusieurs nombres aléatoires avant d’en trouver un qui convient.
-Le nombre d’itérations dépend de la distribution des chiffres valides dans la grille.
-En moyenne, supposons que vous deviez générer k nombres aléatoires pour chaque cellule (où k est une constante).
-Cela se traduit par une complexité O(k) pour la génération aléatoire.
-Appels récursifs :
-Votre méthode utilise la récursivité pour résoudre la grille.
-Dans le pire des cas, elle peut explorer toutes les combinaisons possibles de chiffres pour chaque cellule.
-Le nombre d’appels récursifs dépend de la difficulté du Sudoku initial.
-En moyenne, supposons que vous effectuiez m appels récursifs (où m est une constante).
-Cela se traduit par une complexité O(m) pour les appels récursifs.
-Complexité totale :
-En combinant ces éléments, la complexité totale de votre méthode est O(1) + O(k) + O(m).
-Dans le pire des cas, elle est plus proche d’une complexité exponentielle (par exemple, O(9^81)) en raison des appels récursifs et des permutations.
+**Cas moyen :** O(9^81) (même que le pire cas, car elle génère toutes les permutations possibles).
+
+**Meilleur cas :** O(1) (si la grille est déjà complète et valide).
+
+![Diverses complexités temporelles](https://github.com/pierre-mazard/Sudoku-Solver/blob/README.md/Pictures/Backtracking%20Method%20A%20(Recursiv)/big%20o.png "Diverses complexités temporelles")
 
 **Conclusion :** 
 
-La complexité temporelle de la méthode dépend du Sudoku initial et du nombre d’itérations nécessaires pour remplir la grille. 
+La méthode de force brute génère toutes les permutations possibles sans évaluer les contraintes implicites avant de construire la configuration complète.
 
+#### 1\.2. Complexité spatiale.
 
+La complexité spatiale dépend du stockage des permutations.
 
-1\.2. Complexité spatiale.
+La méthode génère toutes les permutations possibles des chiffres de 1 à 9 pour chaque ligne.
+
+Le nombre total de permutations est 9! = 362,880.
+
+Ensuite, le programme stocke ces permutations en mémoire, ce qui nécessite un espace proportionnel à O(9!).
+
+**Conclusion :** 
+
+Cela peut être considéré comme une complexité spatiale constante car le nombre de permutations est fixe.
 
 **2. Analyse empirique.** 
 
@@ -311,16 +296,21 @@ La complexité temporelle de la méthode dépend du Sudoku initial et du nombre 
 
 2\.2. Mesure du temps d’exécution moyen en fonction du nombre de cases vides.
 
-2\.3 Profilage.
+**2\.3 Profilage.**
+
+![Profilage] (https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brute%20method%20A.png "Profilage")
 
 **3. Comparaison de l’étude théorique et empirique.**
 
 **3 Comparaison des méthodes.**
 
+la méthode de backtracking est plus efficace que la méthode de force brute, car elle optimise le processus en évaluant les contraintes plus tôt et en abandonnant les configurations invalides dès qu’elles sont détectées. 
 
+La complexité exacte dépend du Sudoku initial et du nombre d’opérations nécessaires pour remplir la grille. 
 
+La méthode de backtracking a une complexité spatiale linéaire par rapport au nombre d’appels récursifs, tandis que la méthode de force brute stocke toutes les permutations possibles en mémoire. 
 
-
+La complexité exacte dépend du Sudoku initial et de la manière dont les données sont stockées pendant l’exécution.
 
 
 
