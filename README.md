@@ -2,7 +2,7 @@
 
 |                                     **Sommaire**                                  | 
 |-----------------------------------------------------------------------------------|
-|                         **1. Backtracking récursif méthode A**                    |
+|                         **1. Backtracking récursif Méthode A**                    |
 |   a. Présentation de la fonction                                                  |
 |   b. Analyse théorique                                                            |
 |         - Complexité temporelle                                                       |
@@ -12,7 +12,7 @@
 |         - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
 |         - Profilage                                                                   |                     
 |   d. Comparaison de l'étude théorique et empirique                                |
-|                             **2. Force Brute méthode A**                          |
+|                             **2. Force Brute Méthode A**                          |
 |   a. Présentation de la fonction                                                  |
 |   b. Analyse théorique                                                            |
 |         - Complexité temporelle                                                       |
@@ -22,15 +22,14 @@
 |         - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
 |         - Profilage                                                                   |                     
 |   d. Comparaison de l'étude théorique et empirique                                |
-|                               **3. Backtracking méthode B**                       |
+|                               **3. Backtracking Méthode B**                       |
 |         a. Présentation de la fonction                                                    |
 |         b. Compléxité algorithmique                                                       |
 |         d. Conclusion                                                                     |
 |                             **4. Comparaison des méthodes**                       |
-|           a. Comparaison Backtracking Method A et Force Brute methode A           |
-|           b. Comparaison Backtracking Method A et Backtracking Method B           |      
-|                              c. Utilisation du profilage                          |
-|                                   d. Conclusion                                   |
+|           a. Comparaison Backtracking Méthode A, Force Brute Méthode A et Backtracking Méthode B          |     
+|                              b. Utilisation du profilage                          |
+|                                   c. Conclusion                                   |
 
 
 
