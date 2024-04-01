@@ -304,7 +304,7 @@ Cela peut être considéré comme une complexité spatiale constante car le nomb
 
 # 3 Comparaison des méthodes.
 
-la méthode de backtracking est plus efficace que la méthode de force brute, car elle optimise le processus en évaluant les contraintes plus tôt et en abandonnant les configurations invalides dès qu’elles sont détectées. 
+La méthode de backtracking est plus efficace que la méthode de force brute, car elle optimise le processus en évaluant les contraintes plus tôt et en abandonnant les configurations invalides dès qu’elles sont détectées. 
 
 La complexité exacte dépend du Sudoku initial et du nombre d’opérations nécessaires pour remplir la grille. 
 
@@ -320,7 +320,7 @@ La complexité exacte dépend du Sudoku initial et de la manière dont les donn�
 
 ![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brut%20method%20A%20with%20executing%20time.png "Profilage")
 
-
+Grace au profilage et à la relève du temps d'exécution des deux méthodes pour chaque grilles, on constate que le backtracking et plus performant et plus rapide que la force brute. 
 
 
 
