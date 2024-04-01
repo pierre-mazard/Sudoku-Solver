@@ -377,15 +377,37 @@ La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9
 
 ### Les temps d'exécutions : 
 
-| **Nb essais = 1** | Nombre cases vides |Moyenne exécution (s.)| Colonne 5 |
-|---------------|-----------|-----------|-----------|
-| Fichier 1     |    45       |    0,00317      |           |
-| Fichier 2     |    52       |    0,01561      |           |
-| Fichier 3     |    43       |    0,00154      |           |
-| Fichier 4     |    57       |    0,05026      |           |
-| Fichier 5     |    58       |    0,03562      |           |
+| **Nb essais = 1** | Nombre cases vides |Moyenne exécution (s.)
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,00317      |
+| Fichier 2     |    52       |    0,01561      |
+| Fichier 3     |    43       |    0,00154      |
+| Fichier 4     |    57       |    0,05026      |
+| Fichier 5     |    58       |    0,03562      |
 
+| **Nb essais = 100** | Nombre cases vides |Moyenne exécution (s.)
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,0000497    |
+| Fichier 2     |    52       |    0,0001594    |
+| Fichier 3     |    43       |    0,0000448    |
+| Fichier 4     |    57       |    0,0005462    |
+| Fichier 5     |    58       |    0,0000241    |
 
+| **Nb essais = 1000** | Nombre cases vides |Moyenne exécution (s.)
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,00001994     |
+| Fichier 2     |    52       |    0,00016549     |
+| Fichier 3     |    43       |    0,00001758     |
+| Fichier 4     |    57       |    0,00006088     |
+| Fichier 5     |    58       |    0,00004642     |
+
+| **Nb essais = 1000000** | Nombre cases vides |Moyenne exécution (s.)
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,000008552  |
+| Fichier 2     |    52       |    0,01561      |
+| Fichier 3     |    43       |    0,00154      |
+| Fichier 4     |    57       |    0,05026      |
+| Fichier 5     |    58       |    0,03562      |
 
 ## d. ? 
 
