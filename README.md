@@ -409,9 +409,15 @@ La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9
 | Fichier 4     |    57       |    0,000008512    |
 | Fichier 5     |    58       |    0,000008477    |
 
-## d. Paramètres efficaces
+## d.Conclusion
 
-En prenant en compte le nombre de cases vides à remplir et la moyenne d'exécution de l'algorithme, 
+En prenant en compte le nombre de cases vides à remplir et la moyenne d'exécution de l'algorithme, le sudoku ayant le nombre de cases le plus bas (*n=43, sudoku 3*) obtient une moyenne de temps plus courte que les autres. 
+
+Lorsqu'il s'agit de comparer le temps moyen de résolution selon le nombre de tests réalisés, les résultats deviennent intéressants : 
+pour N=100 essais, le sudoku ayant une moyenne de temps la plus réduite rest le sudoku le plus difficile soit le sudoku 5 (*58 cases vides, 0,0000241 secondes*). 
+
+Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du sudoku vascillera entre: le sudoku 2, le sudoku 3 et le sudoku 5.
+
 
 # 4. Comparaison des méthodes 
 ## a. Comparaison Backtracking Method A et Force Brute methode A
