@@ -376,21 +376,29 @@ Dans le cas de cette méthode, **le code utilise la forme récursive.**
 La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9, et le backtracking est utilisé pour revenir en arrière si le numéro ne correspond pas à la ligne et colonne. 
 
 ### Les temps d'exécutions : 
-|                                     **Par fichiers**                                  | 
-|-----------------------------------------------------------------------------------|
-|                         **Fichier 1, Nombres essais : 1**                              |
-|      Nombre de cases vides:  45                                                               |
-|      Average Execution Time: 0.03692362499896262 seconds
-|      Uncertainty: 0 seconds
-|      Total Time: 0.03692362499896262 seconds
-|                             **Fichier 2, Nombres essais : 1**                          |
-|      Nombre de cases vides:  52                                                               |
-|                             **Fichier 3, Nombres essais : 1**                          |
-|      Nombre de cases vides:  43                                                                |
-|                             **Fichier 4, Nombres essais : 1**                          |
-|      Nombre de cases vides:  57                                                               |
-|                             **Fichier 5, Nombres essais : 1**                          |
-|      Nombre de cases vides:  58                                                             |
+
+| Colonne 1 | Colonne 2 | Colonne 3 |
+|-----------|-----------|-----------|
+| Ligne 1   | Ligne 1   | Ligne 1   |
+| Ligne 2   | Ligne 2   | Ligne 2   |
+| Ligne 3   | Ligne 3   | Ligne 3   |
+| Ligne 4   | Ligne 4   | Ligne 4   |
+| Ligne 5   | Ligne 5   | Ligne 5   |
+| Ligne 6   | Ligne 6   | Ligne 6   |
+| Ligne 7   | Ligne 7   | Ligne 7   |
+| Ligne 8   | Ligne 8   | Ligne 8   |
+| Ligne 9   | Ligne 9   | Ligne 9   |
+| Ligne 10  | Ligne 10  | Ligne 10  |
+| Ligne 11  | Ligne 11  | Ligne 11  |
+| Ligne 12  | Ligne 12  | Ligne 12  |
+| Ligne 13  | Ligne 13  | Ligne 13  |
+| Ligne 14  | Ligne 14  | Ligne 14  |
+| Ligne 15  | Ligne 15  | Ligne 15  |
+| Ligne 16  | Ligne 16  | Ligne 16  |
+| Ligne 17  | Ligne 17  | Ligne 17  |
+| Ligne 18  | Ligne 18  | Ligne 18  |
+| Ligne 19  | Ligne 19  | Ligne 19  |
+| Ligne 20  | Ligne 20  | Ligne 20  |
 
 
 ## d. ? 
@@ -403,27 +411,6 @@ La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9
 ## c. Utilisation du profilage
 
 ## d. Conclusion      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
