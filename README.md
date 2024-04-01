@@ -318,10 +318,53 @@ Grace au profilage et à la relève du temps d'exécution des deux méthodes pou
 
 # 3. Backtracking méthode B
 ## a. Présentation de la fonction
+### Code :
+    def solve_sudoku(self):
+        def is_valid(num, row, col):
+            for i in range(9):
+                if self.grid[row][i] == num or self.grid[i][col] == num:
+                    return False
+            start_row, start_col = 3 * (row // 3), 3 * (col // 3)
+            for i in range(3):
+                for j in range(3):
+                    if self.grid[start_row + i][start_col + j] == num:
+                        return False
+            return True
+        def solve_next_empty(row, col):
+            if row == 8 and col == 9:
+                return True
+            if col == 9:
+                row += 1
+                col = 0
+            if self.grid[row][col] != 0:
+                return solve_next_empty(row, col + 1)
+            for num in range(1, 10):
+                if is_valid(num, row, col):
+                    self.grid[row][col] = num
+                    if solve_next_empty(row, col + 1):
+                        return True
+                    self.grid[row][col] = 0
+            return False
+        return solve_next_empty(0, 0)
+        
+### Explications: 
 
-## b. Compléxité algorithmique //  Les temps d'exécutions
+def is_valid(num, row, col) prends 3 arguments (num: nombre à vérifier, row: la ligne dans la grille, col: la colonne dans la grille). 
+Avec 'start_row, start_col = 3 * (row // 3), 3 * (col // 3)' : calcul des coordonnées de la cellule en les divisants en neuf blocs de 3x3. 
+Cette fonction examine si un nombre n'est pas déjà présent dans une ligne et colonne. S'il est présent : il retourne 'False' à la position identifiée. S'il n'est pas présent : True. 
 
-## d. 
+def solve_next_empty(row, col) prends 2 arguments (row : la ligne, col : la colonne). C'est ici que la récursivité opérera en essayant de remplir les cases vides. 
+Pour chaque nombre valide, il place dans la case le nombre et appelle la fonction 'solve_next_empty' pour continuer avec n+1.
+Si une solution est valide : True et retourne la grille complétée.
+Si aucune solution n'est valide : False et elle réinitialise la case à 0. Elle continue de chercher avec les autres nombres à disposition. Si aucun nombre ne correspond, la fonction revient en arrière : False, les choix précédents étaient incorrects et elle revient en arrière. 
+
+
+
+## b. Compléxité algorithmique (Les temps d'exécutions)
+
+Le backtracking méthode B utilise la forme récursive. 
+
+## d. ? 
 
 # 4. Comparaison des méthodes 
 ## a. Comparaison Backtracking Method A et Force Brute methode A
