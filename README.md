@@ -349,20 +349,49 @@ Grace au profilage et à la relève du temps d'exécution des deux méthodes pou
         
 ### Explications: 
 
-def is_valid(num, row, col) prends 3 arguments (num: nombre à vérifier, row: la ligne dans la grille, col: la colonne dans la grille). 
+*def is_valid(num, row, col)* prends 3 arguments (num: nombre à vérifier, row: la ligne dans la grille, col: la colonne dans la grille). 
+
 Avec 'start_row, start_col = 3 * (row // 3), 3 * (col // 3)' : calcul des coordonnées de la cellule en les divisants en neuf blocs de 3x3. 
+
 Cette fonction examine si un nombre n'est pas déjà présent dans une ligne et colonne. S'il est présent : il retourne 'False' à la position identifiée. S'il n'est pas présent : True. 
 
-def solve_next_empty(row, col) prends 2 arguments (row : la ligne, col : la colonne). C'est ici que la récursivité opérera en essayant de remplir les cases vides. 
+*def solve_next_empty(row, col)* prends 2 arguments (row : la ligne, col : la colonne). 
+C'est ici que la récursivité opérera en essayant de remplir les cases vides. 
+
 Pour chaque nombre valide, il place dans la case le nombre et appelle la fonction 'solve_next_empty' pour continuer avec n+1.
+
 Si une solution est valide : True et retourne la grille complétée.
 Si aucune solution n'est valide : False et elle réinitialise la case à 0. Elle continue de chercher avec les autres nombres à disposition. Si aucun nombre ne correspond, la fonction revient en arrière : False, les choix précédents étaient incorrects et elle revient en arrière. 
 
+Avec *return solve_next_empty(0, 0)* on appel la fonction pour commencer à la première ligne, première colonne. 
 
+## b. Compléxité algorithmique
 
-## b. Compléxité algorithmique (Les temps d'exécutions)
+### La forme : 
+Il existe deux formes en backtracking : itérative et récursive. 
+Dans le cas de cette méthode, **le code utilise la forme récursive.**
 
-Le backtracking méthode B utilise la forme récursive. 
+*Toutes les possibilités sont explorées et il y a retour en arrière si l'exploration ne mène pas à une solution.*
+
+La récursivité est utilisée pour exploiter toutes les possibilités de 1 à 9, et le backtracking est utilisé pour revenir en arrière si le numéro ne correspond pas à la ligne et colonne. 
+
+### Les temps d'exécutions : 
+|                                     **Par fichiers**                                  | 
+|-----------------------------------------------------------------------------------|
+|                         **Fichier 1, Nombres essais : 1**                              |
+|      Nombre de cases vides:  45                                                               |
+|      Average Execution Time: 0.03692362499896262 seconds
+|      Uncertainty: 0 seconds
+|      Total Time: 0.03692362499896262 seconds
+|                             **Fichier 2, Nombres essais : 1**                          |
+|      Nombre de cases vides:  52                                                               |
+|                             **Fichier 3, Nombres essais : 1**                          |
+|      Nombre de cases vides:  43                                                                |
+|                             **Fichier 4, Nombres essais : 1**                          |
+|      Nombre de cases vides:  57                                                               |
+|                             **Fichier 5, Nombres essais : 1**                          |
+|      Nombre de cases vides:  58                                                             |
+
 
 ## d. ? 
 
