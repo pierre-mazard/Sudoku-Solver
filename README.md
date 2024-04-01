@@ -314,11 +314,11 @@ La complexité exacte dépend du Sudoku initial et de la manière dont les donn�
 
 **Profilage Backtracking methode A** 
 
-![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20backtracking%20A%20with%20executing%20time.png"Profilage")
+![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20backtracking%20A%20with%20executing%20time.png "Profilage")
 
 **Profilage Force burte méthode A**
 
-![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brut%20method%20A%20with%20executing%20time.png"Profilage")
+![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brut%20method%20A%20with%20executing%20time.png "Profilage")
 
 
 
