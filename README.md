@@ -1,46 +1,35 @@
 # Etude comparative des différentes méthodes de résolution des sudokus :
-
-## Sommaire
-
-## 1 Backtracking récursif méthode A.
-
-**1. Analyse théorique.**
-
-_1\.1. Complexité temporelle._
-
-_1\.2. Complexité spatiale._
-
-**2. Analyse empirique.** 
-
-_2\.1. Mesure du temps d’exécution moyen en fonction du nombre d’essais._
-
-_2\.2. Mesure du temps d’exécution moyen en fonction du nombre de cases vides._
-
-_2\.3 Profilage._
-
-**3. Comparaison de l’étude théorique et empirique.**
-
-## 2 Force Brute méthode A.
-
-**1. Analyse théorique.**
-
-_1\.1. Complexité temporelle._
-
-_1\.2. Complexité spatiale._
-
-**2. Analyse empirique.** 
-
-_2\.1. Mesure du temps d’exécution moyen en fonction du nombre d’essais._
-
-_2\.2. Mesure du temps d’exécution moyen en fonction du nombre de cases vides._
-
-_2\.3 Profilage._
-
-**3. Comparaison de l’étude théorique et empirique.**
-
-## 3 Comparaison des méthodes.
-
-
+|-----------------------------------------------------------------------------------|
+|                                     **Sommaire**                                  | 
+|-----------------------------------------------------------------------------------|
+| **1. Backtracking récursif méthode A**  | **2. Force Brute méthode A**            |
+|-----------------------------------------|-----------------------------------------|
+|   a. Présentation de la fonction        |    a. Présentation de la fonction       |
+|   b. Analyse théorique                  |    b. Analyse théorique                 |
+|     - Complexité temporelle             |      - Complexité temporelle            |
+|     - Complexité spatiale               |      - Complexité spatiale              |
+|   c. Analyse empirique                  |   c. Analyse empirique                  |
+|     - Temps d'exécution moyen nb essais |     - Temps d'exécution moyen nb essais |
+|     - Temps d'exécution moyen cases     |     - Temps d'exécution moyen cases     |
+|                               vides     |                               vides     |
+|     - Profilage                         |     - Profilage                         |
+|   d. Comparaison de l'étude théorique   |   d. Comparaison de l'étude théorique   |
+|     et empirique                        |     et empirique                        |
+|-----------------------------------------|-----------------------------------------|
+|                                **3. Backtracking méthode B**                      |
+|-----------------------------------------|-----------------------------------------|
+| a. Présentation de la fonction
+| b. Compléxité algorithmique //  Les temps d'exécutions
+| d. 
+|
+|-----------------------------------------|-----------------------------------------|
+|                             **4. Comparaison des méthodes**                       |
+|-----------------------------------------|-----------------------------------------|
+|           a. Comparaison Backtracking Method A et Force Brute methode A           |
+|           b. Comparaison Backtracking Method A et Backtracking Method B           |      
+|                              c. Utilisation du profilage                          |
+|                                   d. Conclusion                                   |
+|-----------------------------------------------------------------------------------|
 
 
 # 1 Backtracking récursif méthode A.
@@ -324,7 +313,21 @@ La complexité spatiale exacte dépend du Sudoku initial et de la manière dont 
 
 Grace au profilage et à la relève du temps d'exécution des deux méthodes pour chaque grilles, on constate que le backtracking est plus performant et plus rapide que la force brute. 
 
+# 3. Backtracking méthode B
+## a. Présentation de la fonction
 
+## b. Compléxité algorithmique //  Les temps d'exécutions
+
+## d. 
+
+# 4. Comparaison des méthodes 
+## a. Comparaison Backtracking Method A et Force Brute methode A
+
+## b. Comparaison Backtracking Method A et Backtracking Method B    
+
+## c. Utilisation du profilage
+
+## d. Conclusion      
 
 
 
