@@ -26,7 +26,6 @@
 | a. Présentation de la fonction                                                    |
 | b. Compléxité algorithmique                                                       |
 | d. Conclusion                                                                     |
-|                                                                                   |
 |                             **4. Comparaison des méthodes**                       |
 |           a. Comparaison Backtracking Method A et Force Brute methode A           |
 |           b. Comparaison Backtracking Method A et Backtracking Method B           |      
