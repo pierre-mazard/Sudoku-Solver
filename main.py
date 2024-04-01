@@ -1,7 +1,7 @@
 import pygame
 import backtracking_method_A
 import backtracking_method_B
-import force_brut_method_A
+import brut_force_method_A
 
 
 
@@ -10,9 +10,9 @@ class SudokuVisualizer:
 
     # Initialize the Pygame window
     def __init__(self, filename):
-        self.sudoku_solver_BA = backtracking_method_A.SudokuSolver(filename)
-        self.sudoku_solver_BB = backtracking_method_B.SudokuSolver(filename)
-        self.sudoku_solver_FBA = force_brut_method_A.SudokuSolver(filename)
+        self.sudoku_solver_BA = backtracking_method_A.SudokuSolverBA(filename)
+        self.sudoku_solver_BB = backtracking_method_B.SudokuSolverBB(filename)
+        self.sudoku_solver_FBA = brut_force_method_A.SudokuSolverFBA(filename)
         self.width, self.height = 540, 600
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Sudoku Visualizer")
@@ -54,6 +54,22 @@ class SudokuVisualizer:
         text = self.font.render("Solve", True, (0, 0, 0))
         self.screen.blit(text, (550, 10))
 
+    def solve_selected_sudoku(self):
+        if self.selected_solver == "Backtracking Méthode A":
+            self.sudoku_solver_BA.solve()
+        elif self.selected_solver == "Backtracking Méthode B":
+            self.sudoku_solver_BB.solve()
+        elif self.selected_solver == "Brute Force Méthode A":
+            self.sudoku_solver_FBA.solve()
+
+    def get_selected_solver(self, choice):
+        if choice == 0:
+            self.selected_solver = "Backtracking Méthode A"
+        elif choice == 1:
+            self.selected_solver = "Backtracking Méthode B"
+        elif choice == 2:
+            self.selected_solver = "Brute Force Méthode A"
+
     # Main function to visualize Sudoku using Pygame
     def main(self):
         while self.running:
@@ -72,13 +88,15 @@ class SudokuVisualizer:
                     if 0 <= x < 540 and 0 <= y < 540:
                         row, col = y // 60, x // 60
                         self.selected = (row, col)
+                        self.solve_selected_sudoku()
                     elif 0 <= x < 540 and 540 <= y < 600:
                         choice = x // 60
                         selected_filename = f"Sudoku-Board/sudoku{choice + 1}.txt"
-                        self.sudoku_solver_BA = backtracking_method_A.SudokuSolver(selected_filename)
-                        self.sudoku_solver_BB = backtracking_method_B.SudokuSolver(selected_filename)
-                        self.sudoku_solver_FBA = force_brut_method_A.SudokuSolver(selected_filename)
-
+                        self.sudoku_solver_BA = backtracking_method_A.SudokuSolverBA(selected_filename)
+                        self.sudoku_solver_BB = backtracking_method_B.SudokuSolverBB(selected_filename)
+                        self.sudoku_solver_FBA = brut_force_method_A.SudokuSolverFBA(selected_filename)
+                        self.get_selected_solver(choice)
+                        
             self.clock.tick(60)
 
         pygame.quit()
