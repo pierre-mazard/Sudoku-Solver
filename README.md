@@ -322,7 +322,7 @@ La complexité spatiale exacte dépend du Sudoku initial et de la manière dont 
 
 ![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brut%20method%20A%20with%20executing%20time.png "Profilage")
 
-Grace au profilage et à la relève du temps d'exécution des deux méthodes pour chaque grilles, on constate que le backtracking et plus performant et plus rapide que la force brute. 
+Grace au profilage et à la relève du temps d'exécution des deux méthodes pour chaque grilles, on constate que le backtracking est plus performant et plus rapide que la force brute. 
 
 
 
