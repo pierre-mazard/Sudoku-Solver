@@ -422,7 +422,7 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 ## a. Comparaison Backtracking Méthode A, Force Brute Méthode A et Backtracking Méthode B 
 ### Moyenne de temps d'execution (exprimé en ms.)
 
-| **Nb essais = 1** | Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+| **Nb essais = 1** | Backtracking Méthode A |Force Brute Méthode A |Backtracking Méthode B |
 |---------------|-----------|-----------|-----------|
 | Fichier 1     |    10,07       |    8,91 |    3,17      |
 | Fichier 2     |    36,47       |    37,20|    15,61      |
@@ -430,7 +430,7 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 | Fichier 4     |    151,93       |    152,75|    50,26      |
 | Fichier 5     |    94,99       |    93,35 |    35,62      |
 
-| **Nb essais = 100** |Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+| **Nb essais = 100** |Backtracking Méthode A |Force Brute Méthode A |Backtracking Méthode B |
 |---------------|-----------|-----------|-----------|
 | Fichier 1     |    0,1171 |   0,1205|    0,0497    |
 | Fichier 2     |    0,3710 |    0,3407|    0,1594    |
@@ -438,7 +438,7 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 | Fichier 4     |    1,6413 |    1,5216|    0,5462    |
 | Fichier 5     |    0,9354 |    0,8923|    **0,0241**    |
 
-| **Nb essais = 1000** |Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+| **Nb essais = 1000** |Backtracking Méthode A |Force Brute Méthode A |Backtracking Méthode B |
 |---------------|-----------|-----------|-----------|
 | Fichier 1     |    0,02594|    0,0269|    0,01994     |
 | Fichier 2     |    0,04969|    0,0493|    0,16549     |
@@ -446,7 +446,7 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 | Fichier 4     |    0,16092|    0,1639|    0,06088     |
 | Fichier 5     |    0,10333|    0,1034|    0,04642     |
 
-| **Nb essais = 1000000** |Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+| **Nb essais = 1000000** |Backtracking Méthode A |Force Brute Méthode A |Backtracking Méthode B |
 |---------------|-----------|-----------|-----------|
 | Fichier 1     |    0,010223|    0,010214|    0,008552    |
 | Fichier 2     |    **0,010191**|    0,010205|    **0,008460**    |
