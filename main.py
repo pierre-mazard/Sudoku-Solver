@@ -43,7 +43,16 @@ class SudokuVisualizer:
     def draw_sudoku(self):
         for i in range(9):
             for j in range(9):
-                num = self.sudoku_solver.grid[i][j]
+                
+                if self.selected_solver == "Backtracking Méthode A":
+                    num = self.sudoku_solver_BA.get_grid()[i][j]
+                elif self.selected_solver == "Backtracking Méthode B":
+                    num = self.sudoku_solver_BB.get_grid()[i][j]
+                elif self.selected_solver == "Brute Force Méthode A":
+                    num = self.sudoku_solver_FBA.get_grid()[i][j]
+                else:
+                    num = 0
+        
                 if num != 0:
                     text = self.font.render(str(num), True, (0, 0, 0))
                     self.screen.blit(text, (60 * j + 20, 60 * i + 10))
