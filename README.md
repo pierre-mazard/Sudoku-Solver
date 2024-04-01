@@ -426,39 +426,41 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 |---------------|-----------|-----------|-----------|
 | Fichier 1     |    10,07       |    8,91 |    3,17      |
 | Fichier 2     |    36,47       |    37,20|    15,61      |
-| **Fichier 3**     |    **5,62**       |   5,65|    **1,54**      |
+| **Fichier 3**     |    **5,62**       |   **5,65**|    **1,54**      |
 | Fichier 4     |    151,93       |    152,75|    50,26      |
 | Fichier 5     |    94,99       |    93,35 |    35,62      |
 
-| **Nb essais = 100** | Méthode A |Méthode B |
-|---------------|-----------|-----------|
-| Fichier 1     |    0,1171 |    0,0497    |
-| Fichier 2     |    0,3710 |    0,1594    |
-| Fichier 3     |    **0,0768** |    0,0448    |
-| Fichier 4     |    1,6413 |    0,5462    |
-| Fichier 5     |    0,9354 |    **0,0241**    |
+| **Nb essais = 100** |Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+|---------------|-----------|-----------|-----------|
+| Fichier 1     |    0,1171 |   0,1205|    0,0497    |
+| Fichier 2     |    0,3710 |    0,3407|    0,1594    |
+| Fichier 3     |    **0,0768** |    **0,0897**|    0,0448    |
+| Fichier 4     |    1,6413 |    1,5216|    0,5462    |
+| Fichier 5     |    0,9354 |    0,8923|    **0,0241**    |
 
-| **Nb essais = 1000** | Méthode A |Méthode B |
-|---------------|-----------|-----------|
-| Fichier 1     |    0,02594|    0,01994     |
-| Fichier 2     |    0,04969|    0,16549     |
-| Fichier 3     |    **0,02325**|    **0,01758**     |
-| Fichier 4     |    0,16092|    0,06088     |
-| Fichier 5     |    0,10333|    0,04642     |
+| **Nb essais = 1000** |Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+|---------------|-----------|-----------|-----------|
+| Fichier 1     |    0,02594|    0,0269|    0,01994     |
+| Fichier 2     |    0,04969|    0,0493|    0,16549     |
+| Fichier 3     |    **0,02325**|    **0,0224**|    **0,01758**     |
+| Fichier 4     |    0,16092|    0,1639|    0,06088     |
+| Fichier 5     |    0,10333|    0,1034|    0,04642     |
 
-| **Nb essais = 1000000** | Méthode A |Méthode B |
-|---------------|-----------|-----------|
-| Fichier 1     |    0,010223|    0,008552    |
-| Fichier 2     |    **0,010191**|    **0,008460**    |
-| Fichier 3     |    0,010204|    0,008488    |
-| Fichier 4     |    0,010338|    0,008512    |
-| Fichier 5     |    0,010272|    0,008477    |
+| **Nb essais = 1000000** |Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+|---------------|-----------|-----------|-----------|
+| Fichier 1     |    0,010223|    0,010214|    0,008552    |
+| Fichier 2     |    **0,010191**|    0,010205|    **0,008460**    |
+| Fichier 3     |    0,010204|    **0,010168**|    0,008488    |
+| Fichier 4     |    0,010338|   0,010360|    0,008512    |
+| Fichier 5     |    0,010272|    0,010261|    0,008477    |
 
 ### Conclusion 
 
 La vitesse d'exécution dépendra du nombre d'essais et du nombre de cases vides. 
 La méthode B semble être plus rapide en matière d'exécution sur quasiment la totalité des test N=X .
 Toutefois, pour nombres de test = 100, la méthode A fait apparaître une différence dans la moyenne de temps d'exécution. La méthode semble plus rapidement gérer le sudoku 3 alors que la méthode B semble gérer, à 100 tests, plus rapidement le sudoku 5. 
+
+La force brute semble être un peu plus lente. 
 
 ## c. Utilisation du profilage
 
