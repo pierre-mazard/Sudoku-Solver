@@ -418,61 +418,17 @@ pour N=100 essais, le sudoku ayant une moyenne de temps la plus réduite rest le
 Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du sudoku vascillera entre: le sudoku 2, le sudoku 3 et le sudoku 5.
 
 
-# 4. Comparaison des méthodes 
-## a. Comparaison Backtracking Méthode A et Force Brute Méthode A
+# 4. Comparaison des méthodes 3 méthodes
+## a. Comparaison Backtracking Méthode A, Force Brute Méthode A et Backtracking Méthode B 
+### Moyenne de temps d'execution (exprimé en ms.)
 
-### Différence entre les deux codes 
-
-### Différence entre la moyenne de temps d'exécution (en ms.)
-
-| **Nb essais = 1** |  Backtracking Méthode A | Force Brute Méthode A|
-|---------------|-----------|-----------|
-| Fichier 1     |    10,07       |    3,17      |
-| Fichier 2     |    36,47       |    15,61      |
-| **Fichier 3**     |    **5,62**       |    **1,54**      |
-| Fichier 4     |    151,93       |    50,26      |
-| Fichier 5     |    94,99       |    35,62      |
-
-| **Nb essais = 100** | Backtracking Méthode A | Force Brute Méthode A|
-|---------------|-----------|-----------|
-| Fichier 1     |    0,1171 |    0,0497    |
-| Fichier 2     |    0,3710 |    0,1594    |
-| Fichier 3     |    **0,0768** |    0,0448    |
-| Fichier 4     |    1,6413 |    0,5462    |
-| Fichier 5     |    0,9354 |    **0,0241**    |
-
-| **Nb essais = 1000** | Backtracking Méthode A | Force Brute Méthode A|
-|---------------|-----------|-----------|
-| Fichier 1     |    0,02594|    0,01994     |
-| Fichier 2     |    0,04969|    0,16549     |
-| Fichier 3     |    **0,02325**|    **0,01758**     |
-| Fichier 4     |    0,16092|    0,06088     |
-| Fichier 5     |    0,10333|    0,04642     |
-
-| **Nb essais = 1000000** | Backtracking Méthode A | Force Brute Méthode A|
-|---------------|-----------|-----------|
-| Fichier 1     |    0,010223|    0,008552    |
-| Fichier 2     |    **0,010191**|    **0,008460**    |
-| Fichier 3     |    0,010204|    0,008488    |
-| Fichier 4     |    0,010338|    0,008512    |
-| Fichier 5     |    0,010272|    0,008477    |
-
-### Conclusion 
-
-
-## b. Comparaison Backtracking Méthode A et Backtracking Méthode B 
-
-### Différence entre les deux codes 
-
-### Différence entre la moyenne de temps d'exécution (en ms.)
-
-| **Nb essais = 1** | Méthode A |Méthode B |
-|---------------|-----------|-----------|
-| Fichier 1     |    10,07       |    3,17      |
-| Fichier 2     |    36,47       |    15,61      |
-| **Fichier 3**     |    **5,62**       |    **1,54**      |
-| Fichier 4     |    151,93       |    50,26      |
-| Fichier 5     |    94,99       |    35,62      |
+| **Nb essais = 1** | Backtracking Méthode A |Force Brute Méthode B |Backtracking Méthode B |
+|---------------|-----------|-----------|-----------|
+| Fichier 1     |    10,07       |    8,91 |    3,17      |
+| Fichier 2     |    36,47       |    37,20|    15,61      |
+| **Fichier 3**     |    **5,62**       |   5,65|    **1,54**      |
+| Fichier 4     |    151,93       |    152,75|    50,26      |
+| Fichier 5     |    94,99       |    93,35 |    35,62      |
 
 | **Nb essais = 100** | Méthode A |Méthode B |
 |---------------|-----------|-----------|
