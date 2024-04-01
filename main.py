@@ -1,5 +1,8 @@
 import pygame
 import backtracking_method_A
+import backtracking_method_B
+import force_brut_method_A
+
 
 
 # Class to visualize Sudoku using Pygame
@@ -7,7 +10,9 @@ class SudokuVisualizer:
 
     # Initialize the Pygame window
     def __init__(self, filename):
-        self.sudoku_solver = backtracking_method_A.SudokuSolver(filename)
+        self.sudoku_solver_BA = backtracking_method_A.SudokuSolver(filename)
+        self.sudoku_solver_BB = backtracking_method_B.SudokuSolver(filename)
+        self.sudoku_solver_FBA = force_brut_method_A.SudokuSolver(filename)
         self.width, self.height = 540, 600
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Sudoku Visualizer")
@@ -70,7 +75,9 @@ class SudokuVisualizer:
                     elif 0 <= x < 540 and 540 <= y < 600:
                         choice = x // 60
                         selected_filename = f"Sudoku-Board/sudoku{choice + 1}.txt"
-                        self.sudoku_solver = backtracking_method_A.SudokuSolver(selected_filename)
+                        self.sudoku_solver_BA = backtracking_method_A.SudokuSolver(selected_filename)
+                        self.sudoku_solver_BB = backtracking_method_B.SudokuSolver(selected_filename)
+                        self.sudoku_solver_FBA = force_brut_method_A.SudokuSolver(selected_filename)
 
             self.clock.tick(60)
 
