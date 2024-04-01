@@ -2,9 +2,7 @@
 
 ## Sommaire
 
-## 1 Backtracking.
-
-### 1.A Backtracking récursif méthode A.
+## 1 Backtracking récursif méthode A.
 
 **1. Analyse théorique.**
 
@@ -45,9 +43,7 @@ _2\.3 Profilage._
 
 
 
-# 1 Backtracking.
-
-## 1.A Backtracking récursif méthode A.
+# 1 Backtracking récursif méthode A.
 
 ### 1. Analyse théorique.
 
