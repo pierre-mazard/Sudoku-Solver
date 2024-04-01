@@ -422,9 +422,60 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 # 4. Comparaison des méthodes 
 ## a. Comparaison Backtracking Method A et Force Brute methode A
 
-## b. Comparaison Backtracking Method A et Backtracking Method B    
+### Différence entre les deux codes 
+
+### Différence entre la moyenne de temps d'exécution
+
+
+| **Nb essais = 1** | Backtracking Méthode A | Force Brute Méthode B|
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,00317      |
+| Fichier 2     |    52       |    0,01561      |
+| Fichier 3     |    43       |    0,00154      |
+| Fichier 4     |    57       |    0,05026      |
+| Fichier 5     |    58       |    0,03562      |
+
+## b. Comparaison Backtracking Method A et Backtracking Method B 
+
+### Différence entre les deux codes 
+
+### Différence entre la moyenne de temps d'exécution
+
+| **Nb essais = 1** | Méthode A |Méthode B|
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,00317      |
+| Fichier 2     |    52       |    0,01561      |
+| Fichier 3     |    43       |    0,00154      |
+| Fichier 4     |    57       |    0,05026      |
+| Fichier 5     |    58       |    0,03562      |
+
+| **Nb essais = 100** | Méthode A |Méthode B|
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,0000497    |
+| Fichier 2     |    52       |    0,0001594    |
+| Fichier 3     |    43       |    0,0000448    |
+| Fichier 4     |    57       |    0,0005462    |
+| **Fichier 5**     |    **58**       |    **0,0000241**    |
+
+| **Nb essais = 1000** | Méthode A |Méthode B|
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,00001994     |
+| Fichier 2     |    52       |    0,00016549     |
+| **Fichier 3**     |    **43**       |    **0,00001758**     |
+| Fichier 4     |    57       |    0,00006088     |
+| Fichier 5     |    58       |    0,00004642     |
+
+| **Nb essais = 1000000** | Méthode A |Méthode B|
+|---------------|-----------|-----------|
+| Fichier 1     |    45       |    0,000008552    |
+| **Fichier 2**     |    **52**       |    **0,000008460**    |
+| Fichier 3     |    43       |    0,000008488    |
+| Fichier 4     |    57       |    0,000008512    |
+| Fichier 5     |    58       |    0,000008477    |
+
 
 ## c. Utilisation du profilage
+
 
 ## d. Conclusion      
 
