@@ -312,6 +312,13 @@ La méthode de backtracking a une complexité spatiale linéaire par rapport au 
 
 La complexité exacte dépend du Sudoku initial et de la manière dont les données sont stockées pendant l’exécution.
 
+**Profilage Backtracking methode A** 
+
+![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/README.md/Pictures/Backtracking%20Method%20A%20(Recursiv)/Backtracking%20Method%20A%20Profiling%20Results.png "Profilage")
+
+**Profilage Force burte méthode A**
+
+![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brute%20method%20A.png "Profilage")
 
 
 
