@@ -302,7 +302,7 @@ Cela peut être considéré comme une complexité spatiale constante car le nomb
 
 **3. Comparaison de l’étude théorique et empirique.**
 
-**3 Comparaison des méthodes.**
+# 3 Comparaison des méthodes.
 
 la méthode de backtracking est plus efficace que la méthode de force brute, car elle optimise le processus en évaluant les contraintes plus tôt et en abandonnant les configurations invalides dès qu’elles sont détectées. 
 
