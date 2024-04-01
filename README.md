@@ -2,17 +2,27 @@
 
 |                                     **Sommaire**                                  | 
 |-----------------------------------------------------------------------------------|
-| **1. Backtracking récursif méthode A**  | **2. Force Brute méthode A**            |
-|   a. Présentation de la fonction        |    a. Présentation de la fonction       |
-|   b. Analyse théorique                  |    b. Analyse théorique                 |
-|     - Complexité temporelle             |      - Complexité temporelle            |
-|     - Complexité spatiale               |      - Complexité spatiale              |
-|   c. Analyse empirique                  |   c. Analyse empirique                  |
-|     - Mesure du temps d’exécution moyen en fonction du nombre d’essais |     - Mesure du temps d’exécution moyen en fonction du nombre d’essais |
-|     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides     |     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides   |
-|     - Profilage                         |     - Profilage                         |
-|   d. Comparaison de l'étude théorique et empirique |   d. Comparaison de l'étude théorique et empirique  |
-|                                **3. Backtracking méthode B**                      |
+|                         **1. Backtracking récursif méthode A**                    |
+|   a. Présentation de la fonction                                                  |
+|   b. Analyse théorique                                                            |
+|     - Complexité temporelle                                                       |
+|     - Complexité spatiale                                                         |
+|   c. Analyse empirique                                                            |
+|     - Mesure du temps d’exécution moyen en fonction du nombre d’essais            |
+|     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
+|     - Profilage                                                                   |                     
+|   d. Comparaison de l'étude théorique et empirique                                |
+|                             **2. Force Brute méthode A**                          |
+|   a. Présentation de la fonction                                                  |
+|   b. Analyse théorique                                                            |
+|     - Complexité temporelle                                                       |
+|     - Complexité spatiale                                                         |
+|   c. Analyse empirique                                                            |
+|     - Mesure du temps d’exécution moyen en fonction du nombre d’essais            |
+|     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides      |
+|     - Profilage                                                                   |                     
+|   d. Comparaison de l'étude théorique et empirique                                |
+|                               **3. Backtracking méthode B**                       |
 | a. Présentation de la fonction                                                    |
 | b. Compléxité algorithmique //  Les temps d'exécutions                            |
 | d.                                                                                |
