@@ -270,11 +270,38 @@ Si une permutation ne donne pas une grille valide, la méthode réinitialise la 
 Elle ne vérifie pas les contraintes implicites avant de générer toutes les solutions possibles.
 
 En résumé, la méthode explore toutes les combinaisons possibles de chiffres pour chaque ligne sans évaluer les contraintes implicites plus tôt dans le processus.
-# ! A faire !
 
-**1. Analyse théorique.**
+### 1. Analyse théorique.**
 
-1\.1. Complexité temporelle.
+#### 1\.1. Complexité temporelle.
+
+La complexité temporelle de la méthode de force brute A dépend du nombre d’opérations effectuées pour remplir la grille :
+
+Boucles imbriquées :
+Votre méthode parcourt chaque cellule de la grille (9x9).
+Le nombre total d’itérations est 81 (9 lignes × 9 colonnes).
+Cela se traduit par une complexité O(1) pour les boucles imbriquées.
+Boucle de génération aléatoire :
+Pour chaque cellule vide, vous générez un nombre aléatoire entre 1 et 9.
+Dans le pire des cas, vous devrez générer plusieurs nombres aléatoires avant d’en trouver un qui convient.
+Le nombre d’itérations dépend de la distribution des chiffres valides dans la grille.
+En moyenne, supposons que vous deviez générer k nombres aléatoires pour chaque cellule (où k est une constante).
+Cela se traduit par une complexité O(k) pour la génération aléatoire.
+Appels récursifs :
+Votre méthode utilise la récursivité pour résoudre la grille.
+Dans le pire des cas, elle peut explorer toutes les combinaisons possibles de chiffres pour chaque cellule.
+Le nombre d’appels récursifs dépend de la difficulté du Sudoku initial.
+En moyenne, supposons que vous effectuiez m appels récursifs (où m est une constante).
+Cela se traduit par une complexité O(m) pour les appels récursifs.
+Complexité totale :
+En combinant ces éléments, la complexité totale de votre méthode est O(1) + O(k) + O(m).
+Dans le pire des cas, elle est plus proche d’une complexité exponentielle (par exemple, O(9^81)) en raison des appels récursifs et des permutations.
+
+**Conclusion :** 
+
+La complexité temporelle de la méthode dépend du Sudoku initial et du nombre d’itérations nécessaires pour remplir la grille. 
+
+
 
 1\.2. Complexité spatiale.
 
