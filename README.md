@@ -8,8 +8,8 @@
 |     - Complexité temporelle             |      - Complexité temporelle            |
 |     - Complexité spatiale               |      - Complexité spatiale              |
 |   c. Analyse empirique                  |   c. Analyse empirique                  |
-|     - Temps d'exécution moyen nb essais |     - Temps d'exécution moyen nb essais |
-|     - Temps d'exécution moyen cases vides     |     - Temps d'exécution moyen cases vides   |
+|     - Mesure du temps d’exécution moyen en fonction du nombre d’essais |     - Mesure du temps d’exécution moyen en fonction du nombre d’essais |
+|     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides     |     - Mesure du temps d’exécution moyen en fonction du nombre de cases vides   |
 |     - Profilage                         |     - Profilage                         |
 |   d. Comparaison de l'étude théorique et empirique |   d. Comparaison de l'étude théorique et empirique  |
 |                                **3. Backtracking méthode B**                      |
