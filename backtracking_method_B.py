@@ -1,7 +1,10 @@
+import time
+import statistics
+
 # Creating my class SudokuSolver 
 class SudokuSolver():
     # Initializing the class SudokuSolver with the possibility to choose between 5 files
-    def __init__(self):
+    def __init__(self, filename):
         self.sudoku_txt = ["Sudoku-Board/sudoku1.txt",
                            "Sudoku-Board/sudoku2.txt",
                            "Sudoku-Board/sudoku3.txt",
@@ -74,12 +77,49 @@ class SudokuSolver():
         for row in self.grid:
             print(row)
     
+    # Calculation of execution time for the backtracking method B
+    def calculate_execution_time(self, num_trials):
+        if num_trials <= 1:
+            start_time = time.perf_counter()
+            self.solve_sudoku()
+            end_time = time.perf_counter()
+            return end_time - start_time, 0, end_time - start_time
+
+        execution_times = []
+        for _ in range(num_trials):
+            start_time = time.perf_counter()
+            self.solve_sudoku()
+            end_time = time.perf_counter()
+            execution_times.append(end_time - start_time)
+
+        avg_execution_time = statistics.mean(execution_times)
+        std_deviation = statistics.stdev(execution_times)
+        uncertainty = std_deviation / (num_trials ** 0.5)
+        total_time = avg_execution_time + uncertainty
+
+        return avg_execution_time, uncertainty, total_time
+    
     def solve_selected_sudoku(self, file_index):
         if 1 <= file_index <= len(self.sudoku_txt):
             self.file_name = self.sudoku_txt[file_index - 1]
             self.grid = self.read_file(self.file_name)
+            self.empty_cells = sum(row.count(0) for row in self.grid) # calculates the number of empty cells
+            # to compare with backtracking_method_A.py AND brut_force.py
+
+            num_trials = int(input("Entrer une nombre de tests: "))
+
+            # Expression of time, for comparison
+            avg_time, uncertainty, total_time = self.calculate_execution_time(num_trials)
+            print()
+            print(f"""⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒""")
+            print(f"""Average Execution Time: {avg_time} seconds, 
+Uncertainty: {uncertainty} seconds, 
+Total Time: {total_time} seconds""")
 
             if self.solve_sudoku():
+                print()
+                print(f"""⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒""")
+                print(f"""Nombre de cases à remplir : {self.empty_cells}""")
                 print(f"""⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒
           Solution :
 ⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒""")
@@ -93,13 +133,27 @@ Bravo! ton sudoku a été résolu!
             print("Erreur : veuillez choisir un nombre entre 1 et 5.")
 
     def print_sudoku_files(self):
-        print("Veuillez choisir un fichier (entre 1 et 5) : \n")
+        print("Veuillez choisir un fichier (entre 1 et 5) \n")
         for i, file_name in enumerate (self.sudoku_txt, start=1):
             print(f"{i}. {file_name}")
 
-# Once all the code is run, test with cProfile.run() to have the total run time taken
-# by the entire code
+# Excecution code 
 
-import cProfile
+def main():
+    input_file = input("Entrez le numéro du fichier Sudoku à résoudre entre 1 et 5 : ")
+    
+    if input_file:
+        file_index = int(input_file)
+        if 1 <= file_index <= 5:
+            solver = SudokuSolver(file_index)
+            solver.solve_selected_sudoku(file_index)
+        else:
+            print("Erreur : veuillez choisir un nombre entre 1 et 5.")
+    else:
+        print("Erreur : veuillez entrer un nombre valide.")
+    #solver = SudokuSolver(file_index)
+    #solver.print_sudoku_files()
 
-cProfile.run("solve_sudoku(grid)")
+
+if __name__ == "__main__":
+    main()
