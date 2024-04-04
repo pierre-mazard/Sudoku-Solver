@@ -4,7 +4,7 @@ import statistics
 # Creating my class SudokuSolver 
 class SudokuSolver():
     # Initializing the class SudokuSolver with the possibility to choose between 5 files
-    def __init__(self):
+    def __init__(self, filename):
         self.sudoku_txt = ["Sudoku-Board/sudoku1.txt",
                            "Sudoku-Board/sudoku2.txt",
                            "Sudoku-Board/sudoku3.txt",
@@ -133,17 +133,27 @@ Bravo! ton sudoku a été résolu!
             print("Erreur : veuillez choisir un nombre entre 1 et 5.")
 
     def print_sudoku_files(self):
-        print("Veuillez choisir un fichier (entre 1 et 5) : \n")
+        print("Veuillez choisir un fichier (entre 1 et 5) \n")
         for i, file_name in enumerate (self.sudoku_txt, start=1):
             print(f"{i}. {file_name}")
 
 # Excecution code 
 
 def main():
-    solver = SudokuSolver()
-    solver.print_sudoku_files()
-    file_index = int(input("Entrez le numéro du fichier Sudoku à résoudre entre 1 et 5 : "))
-    solver.solve_selected_sudoku(file_index)
+    input_file = input("Entrez le numéro du fichier Sudoku à résoudre entre 1 et 5 : ")
+    
+    if input_file:
+        file_index = int(input_file)
+        if 1 <= file_index <= 5:
+            solver = SudokuSolver(file_index)
+            solver.solve_selected_sudoku(file_index)
+        else:
+            print("Erreur : veuillez choisir un nombre entre 1 et 5.")
+    else:
+        print("Erreur : veuillez entrer un nombre valide.")
+    #solver = SudokuSolver(file_index)
+    #solver.print_sudoku_files()
+
 
 if __name__ == "__main__":
     main()
