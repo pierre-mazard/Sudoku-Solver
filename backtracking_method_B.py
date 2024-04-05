@@ -13,8 +13,8 @@ class SudokuSolver():
         self.grid = None
 
     # Function to specify how to read the file
-    def read_file(self, name_file):
-        with open(name_file, 'r') as reading:
+    def read_file(self, filename):
+        with open(filename, 'r') as reading:
             grid = [[int(ch) if ch != '_' else 0 for ch in line.strip()] for line in reading]
             # Removing empty spaces and converting '_' into 0 
             return grid
