@@ -292,28 +292,6 @@ Cela peut être considéré comme une complexité spatiale constante car le nomb
 
 **3. Comparaison de l’étude théorique et empirique.**
 
-# 3 Comparaison des méthodes.
-
-La méthode de backtracking est plus efficace que la méthode de force brute, car elle optimise le processus en évaluant les contraintes plus tôt et en abandonnant les configurations invalides dès qu’elles sont détectées. 
-
-Les deux méthodes possèdent une complexité temporelle exponentielle dans le pire des cas, mais on observe que dans la majorité des cas rencontrés pour des grilles classiques, la complexité temporelle reste constante ou linéaire pour les deux méthodes, en revanche, la méthode de backtracking reste plus rapide et plus optimale pour la résolution de grilles par rapport à la méthode de force brute. 
-
-La complexité temporelle exacte dépend du Sudoku initial et du nombre d’opérations nécessaires pour remplir la grille. 
-
-La méthode de backtracking a une complexité spatiale linéaire par rapport au nombre d’appels récursifs, tandis que la méthode de force brute stocke toutes les permutations possibles en mémoire. 
-
-La complexité spatiale exacte dépend du Sudoku initial et de la manière dont les données sont stockées pendant l’exécution.
-
-**Profilage Backtracking methode A** 
-
-![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20backtracking%20A%20with%20executing%20time.png "Profilage")
-
-**Profilage Force burte méthode A**
-
-![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brut%20method%20A%20with%20executing%20time.png "Profilage")
-
-Grace au profilage et à la relève du temps d'exécution des deux méthodes pour chaque grilles, on constate que le backtracking est plus performant et plus rapide que la force brute. 
-
 # 3. Backtracking méthode B
 ## a. Présentation de la fonction
 ### Code :
@@ -418,7 +396,28 @@ Plus on ira dans les N = X essais, plus la moyenne de temps de résolution du su
 
 
 # 4. Comparaison des méthodes 3 méthodes
-## a. Comparaison Backtracking Méthode A, Force Brute Méthode A et Backtracking Méthode B 
+## a. Comparaison des méthodes.
+
+La méthode de backtracking est plus efficace que la méthode de force brute, car elle optimise le processus en évaluant les contraintes plus tôt et en abandonnant les configurations invalides dès qu’elles sont détectées. 
+
+Les deux méthodes possèdent une complexité temporelle exponentielle dans le pire des cas, mais on observe que dans la majorité des cas rencontrés pour des grilles classiques, la complexité temporelle reste constante ou linéaire pour les deux méthodes, en revanche, la méthode de backtracking reste plus rapide et plus optimale pour la résolution de grilles par rapport à la méthode de force brute. 
+
+La complexité temporelle exacte dépend du Sudoku initial et du nombre d’opérations nécessaires pour remplir la grille. 
+
+La méthode de backtracking a une complexité spatiale linéaire par rapport au nombre d’appels récursifs, tandis que la méthode de force brute stocke toutes les permutations possibles en mémoire. 
+
+La complexité spatiale exacte dépend du Sudoku initial et de la manière dont les données sont stockées pendant l’exécution.
+
+**Profilage Backtracking methode A** 
+
+![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20backtracking%20A%20with%20executing%20time.png "Profilage")
+
+**Profilage Force brute méthode A**
+
+![Profilage](https://github.com/pierre-mazard/Sudoku-Solver/blob/main/Pictures/Backtracking%20Method%20A%20(Recursiv)/profiling%20force%20brut%20method%20A%20with%20executing%20time.png "Profilage")
+
+Grace au profilage et à la relève du temps d'exécution des deux méthodes pour chaque grilles, on constate que le backtracking est plus performant et plus rapide que la force brute. 
+## b. Comparaison Backtracking Méthode A, Force Brute Méthode A et Backtracking Méthode B 
 ### Moyenne de temps d'execution (exprimé en ms.)
 
 | **Nb essais = 1** | Backtracking Méthode A |Force Brute Méthode A |Backtracking Méthode B |
